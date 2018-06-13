@@ -79,4 +79,4 @@ Contributions and feature requests are welcome. If you are using the Google Apps
 
 #### License 📄
 
-[MIT License](https://github.com/labnol/apps-script-starter/LICENSE) (c) [Amit Agarwal](https://digitalinspiration.com/google-developer)
+[MIT License](https://github.com/labnol/apps-script-starter/blob/master/LICENSE) (c) [Amit Agarwal](https://digitalinspiration.com/google-developer)
