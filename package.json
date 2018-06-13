@@ -1,0 +1,57 @@
+{
+  "name": "apps-script-starter",
+  "version": "1.0.2",
+  "description": "A starter kit for creating Google Apps Script project with modern JavaScript",
+  "author": {
+    "name": "Amit Agarwal",
+    "email": "amit@labnol.org",
+    "url": "https://digitalinspiration.com"
+  },
+  "homepage": "https://digitalinspiration.com/",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "prebuild": "npm version --loose-semver --new-version patch",
+    "build": "webpack --bail --progress --colors --display-modules",
+    "deploy": "npm run build && clasp push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labnol/apps-script-starter.git"
+  },
+  "keywords": [
+    "google-apps-script",
+    "gsuite",
+    "apps-script"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@google/clasp": "^1.3.2",
+    "@types/google-apps-script": "0.0.23",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-googleappsscript": "^1.0.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "gas-lib": "^2.0.1",
+    "gas-webpack-plugin": "^0.3.0",
+    "prettier": "^1.13.5",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.4"
+  }
+}
