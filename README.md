@@ -42,9 +42,9 @@ Developers have their own unique style of writing code. AirBnB's JavaScript styl
 
 ## Getting Started 🏃🏼
 
-Getting started with Google Apps Script is something really easy and quick. You also need to install Node.js which includes the npm package manager.
+![Google Apps Script - Setup Development Environment](https://www.labnol.org/media/npm-install.gif)
 
-![Google Apps Script - Setup Development Environment](https://digitalinspiration.com/images/npm-install.gif)
+Setting up a modern development environment for building Google Apps Script projects is easy and quick. You also need to install Node.js which includes the npm package manager.
 
 1\. Clone the repository and install npm dependencies
 ```
