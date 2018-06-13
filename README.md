@@ -8,7 +8,7 @@ The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/
 
 For help, please contact [Amit Agarwal](https://twitter.com/labnol) amit@labnol.org
 
-### Developing with Apps Script 🚀
+## Developing with Apps Script 🚀
 
 The Apps Script Starter kit makes it easy for you to quickly setup a modern development environment and build workflow. Here's everything that's included in the starter kit to get you started:
 
@@ -40,7 +40,7 @@ A code formatter that will beautify your JavaScript, JSON, HTML and CSS styleshe
 
 Developers have their own unique style of writing code. AirBnB's JavaScript style guide outlines how JavaScript code should be written and adheres to the rules.
 
-### Getting Started 🏃🏼
+## Getting Started 🏃🏼
 
 Getting started with Google Apps Script is something really easy and quick. First of all, you need to install Node.js which also includes the npm package manager.
 
@@ -67,7 +67,7 @@ npm run deploy
           
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
-### About the Developer 👨🏼‍💻
+## About the Developer 👨🏼‍💻
 
 [Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows enhance productivity. 
 
