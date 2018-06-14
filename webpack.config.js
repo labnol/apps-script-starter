@@ -7,6 +7,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const destination = 'dist';
 
 module.exports = {
+  context: __dirname,
   entry: './src/index.js',
   output: {
     filename: 'code.js',
@@ -50,17 +51,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env'],
-            plugins: [
-              'transform-es3-property-literals',
-              'transform-es3-member-expression-literals',
-              'transform-class-properties',
-              'transform-object-rest-spread',
-              'transform-object-assign'
-            ]
-          }
+          loader: 'babel-loader'
         }
       }
     ]
