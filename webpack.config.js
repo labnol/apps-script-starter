@@ -21,6 +21,7 @@ module.exports = {
     minimizer: [
       new UglifyJSPlugin({
         uglifyOptions: {
+          ie8: true,
           warnings: false,
           mangle: false,
           compress: {
@@ -56,7 +57,7 @@ module.exports = {
       }
     ]
   },
-  mode: 'none',
+  mode: 'production',
   plugins: [
     new CleanWebpackPlugin([destination]),
     new CopyWebpackPlugin([
