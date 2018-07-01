@@ -1,21 +1,24 @@
 {
   "timeZone": "Asia/Calcutta",
   "dependencies": {
-    "enabledAdvancedServices": [
-      {
-        "userSymbol": "Drive",
-        "serviceId": "drive",
-        "version": "v2"
-      }
-    ],
-    "libraries": [
-      {
-        "userSymbol": "OAuth2",
-        "libraryId":
-          "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
-        "version": "26"
-      }
-    ]
+    "enabledAdvancedServices": [{
+      "userSymbol": "Gmail",
+      "serviceId": "gmail",
+      "version": "v1"
+    }, {
+      "userSymbol": "Drive",
+      "serviceId": "drive",
+      "version": "v2"
+    }],
+    "libraries": [{
+      "userSymbol": "FirebaseApp",
+      "libraryId": "1hguuh4Zx72XVC1Zldm_vTtcUUKUA6iBUOoGnJUWLfqDWx5WlOJHqYkrt",
+      "version": "29"
+    }, {
+      "userSymbol": "OAuth2",
+      "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
+      "version": "26"
+    }]
   },
   "webapp": {
     "access": "ANYONE",
