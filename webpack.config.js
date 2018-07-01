@@ -7,6 +7,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const destination = 'dist';
 
 module.exports = {
+  mode: 'production',
   context: __dirname,
   entry: './src/index.js',
   output: {
@@ -16,6 +17,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js']
+  },
+  watch: false,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000,
+    ignored: /node_modules/
   },
   optimization: {
     minimizer: [
@@ -37,8 +44,7 @@ module.exports = {
     ]
   },
   module: {
-    rules: [
-      {
+    rules: [{
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
@@ -57,22 +63,15 @@ module.exports = {
       }
     ]
   },
-  mode: 'production',
   plugins: [
     new CleanWebpackPlugin([destination]),
-    new CopyWebpackPlugin([
-      {
+    new CopyWebpackPlugin([{
         from: './src/**/*.html',
         flatten: true,
         to: path.resolve(__dirname, destination)
       },
       {
         from: './appsscript.json',
-        to: path.resolve(__dirname, destination)
-      },
-      {
-        from: './src/vendor/*.gs',
-        flatten: true,
         to: path.resolve(__dirname, destination)
       }
     ]),
