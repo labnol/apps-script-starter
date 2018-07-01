@@ -9,5 +9,13 @@
   "rules": {
     "prettier/prettier": "error",
     "import/prefer-default-export": 0
+  },
+  "globals": {
+    "CardService": true,
+    "Gmail": true, 
+    "Drive": true,
+    "OAuth1": true,
+    "OAuth2": true,
+    "FirebaseApp": true
   }
 }
