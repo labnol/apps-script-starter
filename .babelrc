@@ -1,5 +1,9 @@
 {
-    "presets": ["env"],
+    "presets": [
+        ["env", {
+            "modules": false
+        }]
+    ],
     "plugins": [
         "transform-es3-property-literals",
         "transform-es3-member-expression-literals",
