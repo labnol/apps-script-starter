@@ -16,13 +16,7 @@ module.exports = {
     libraryTarget: 'this'
   },
   resolve: {
-    extensions: ['.ts', '.js']
-  },
-  watch: false,
-  watchOptions: {
-    aggregateTimeout: 300,
-    poll: 1000,
-    ignored: /node_modules/
+    extensions: ['.js']
   },
   optimization: {
     minimizer: [
