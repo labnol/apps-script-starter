@@ -4,7 +4,7 @@ const person = {
   email: 'amit@labnol.org'
 };
 
-const { name, email } = person;
-Logger.log(`${name}'s email address is ${email}`);
+const { name, email, country = 'unknown' } = person;
+Logger.log(`${name}'s email address is ${email}. Their country is ${country}`);
 
 export default person;

@@ -1,4 +1,6 @@
 function doGet() {
+}
+function sendmail() {
 }!function(e, a) {
     for (var i in a) e[i] = a[i];
 }(this, function(modules) {
@@ -45,136 +47,48 @@ function doGet() {
         return __webpack_require__.d(getter, "a", getter), getter;
     }, __webpack_require__.o = function(object, property) {
         return Object.prototype.hasOwnProperty.call(object, property);
-    }, __webpack_require__.p = "", __webpack_require__(__webpack_require__.s = 13);
-}([ function(module, exports, __webpack_require__) {
+    }, __webpack_require__.p = "", __webpack_require__(__webpack_require__.s = 1);
+}([ function(module, __webpack_exports__, __webpack_require__) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: !0
+    __webpack_require__.d(__webpack_exports__, "a", function() {
+        return doGet;
     });
-    var person = {
-        name: "Amit Agarwal",
-        website: "https://digitalinspiration.com/",
-        email: "amit@labnol.org"
-    }, name = person.name, email = person.email;
-    Logger.log(name + "'s email address is " + email), exports["default"] = person;
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    var name = "Amit Agarwal";
-    Logger.log(name + " has " + name.length + " characters"), Logger.log(name + " in uppercase is  " + name.toUpperCase()), 
-    Logger.log("The date is " + new Date().toUTCString());
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    var _extends = Object.assign || function(target) {
-        for (var i = 1; i < arguments.length; i++) {
-            var source = arguments[i];
-            for (var key in source) Object.prototype.hasOwnProperty.call(source, key) && (target[key] = source[key]);
-        }
-        return target;
-    }, species = [].concat([ "Monkey", "Lion", "Zebra" ], [ "Sparrow", "Pigeon", "Parrot" ]);
-    Logger.log(species);
-    var personDetails = _extends({}, {
-        name: "Amit Agarwal",
-        email: "amit@labnol.org"
-    }, {
-        url: "https://digitalinspiration.com/"
-    }, {
-        twitter: "@labnol"
-    });
-    Logger.log(personDetails);
-    var emailUpdated = _extends({}, personDetails, {
-        email: "email@example.com"
-    });
-    Logger.log(emailUpdated);
-    var stack = [ "Google Apps Script", "JavaScript", "Firebase", "Node.js", "Webpack", "Babel" ], gas = stack[0], js = stack[1], others = stack.slice(2);
-    Logger.log(gas + " is similar to " + js), Logger.log(others);
-    var newPerson = {
-        name: "Amit Agarwal",
-        email: "amit@labnol.org",
-        website: "https://digitalinspiration.com/"
-    }, name = newPerson.name, _newPerson$age = newPerson.age, age = _newPerson$age === undefined ? "unknown" : _newPerson$age;
-    Logger.log(name + " is " + age + " years old");
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    Logger.log("The name is Amit Agarwal");
-    for (var i = 0; i < 5; i += 1) Logger.log("The count is " + i);
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    var numbers = [ 10, 20, 30 ];
-    numbers.forEach(function(number) {
-        Logger.log(number);
-    });
-    var doubleIt = numbers.map(function(number) {
-        return 2 * number;
-    });
-    Logger.log(doubleIt);
-    var bigNumbers = numbers.filter(function(number) {
-        return number > 10;
-    });
-    Logger.log(bigNumbers);
-    var sum = numbers.reduce(function(accumulator, currentValue) {
-        return accumulator + currentValue;
-    }, 0);
-    Logger.log("The sum of " + numbers.join(", ") + " is " + sum);
-    var result = [ 1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4 ].sort().reduce(function(accumulator, current) {
-        var length = accumulator.length;
-        return 0 !== length && accumulator[length - 1] === current || accumulator.push(current), 
-        accumulator;
-    }, []);
-    Logger.log(result);
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: !0
-    }), exports.getCurrentTime = exports.SCRIPT_TIMEOUT = undefined;
-    var obj, _destructuring = __webpack_require__(0), _destructuring2 = (obj = _destructuring) && obj.__esModule ? obj : {
-        "default": obj
+    var doGet = function() {
+        return HtmlService.createHtmlOutputFromFile("index.html").setTitle("Google Apps Script").setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
     };
-    exports.SCRIPT_TIMEOUT = 3e5, exports.getCurrentTime = function() {
-        return Date.now();
-    };
-    Logger.log(_destructuring2["default"]);
-}, function(module, exports, __webpack_require__) {
+}, function(module, __webpack_exports__, __webpack_require__) {
     "use strict";
-    var _slicedToArray = function() {
-        return function(arr, i) {
-            if (Array.isArray(arr)) return arr;
-            if (Symbol.iterator in Object(arr)) return function(arr, i) {
-                var _arr = [], _n = !0, _d = !1, _e = undefined;
-                try {
-                    for (var _s, _i = arr[Symbol.iterator](); !(_n = (_s = _i.next()).done) && (_arr.push(_s.value), 
-                    !i || _arr.length !== i); _n = !0) ;
-                } catch (err) {
-                    _d = !0, _e = err;
-                } finally {
-                    try {
-                        !_n && _i["return"] && _i["return"]();
-                    } finally {
-                        if (_d) throw _e;
-                    }
-                }
-                return _arr;
-            }(arr, i);
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    __webpack_require__.r(__webpack_exports__), function(global) {
+        var _server_webapp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+        __webpack_require__(11);
+        global.doGet = _server_webapp__WEBPACK_IMPORTED_MODULE_0__["a"], global.sendmail = function() {
+            var email = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "amit@labnol.org";
+            GmailApp.sendEmail(email, "It works!", "Hello Google Apps Script");
         };
+    }.call(this, __webpack_require__(2));
+}, function(module, exports) {
+    var g;
+    g = function() {
+        return this;
     }();
-    var Person = function Person() {
-        var _this = this;
-        !function(instance, Constructor) {
-            if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
-        }(this, Person), this.name = "Amit Agarwal", this.greet = function() {
-            return "Hello " + _this.name + "!!";
-        }, this.getFirstName = function() {
-            var _name$split = _this.name.split(" ");
-            return _slicedToArray(_name$split, 1)[0];
-        };
+    try {
+        g = g || Function("return this")() || (0, eval)("this");
+    } catch (e) {
+        "object" == typeof window && (g = window);
+    }
+    module.exports = g;
+}, function(module, exports) {
+    Logger.log("The sum of 2 and 3 is " + (2 + 3));
+    Logger.log("The bigger of 10 and 12 is " + function(a, b) {
+        return a > b ? a : b;
+    }(10, 12));
+    var multiply = function(value) {
+        return value * (arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2);
     };
-    Person.country = "India", Person.sayHello = function() {
-        Logger.log("Hello World!!");
-    };
-    var person = new Person();
-    Logger.log(person.getFirstName()), Logger.log(Person.country), Person.sayHello();
-}, function(module, exports, __webpack_require__) {
-    "use strict";
+    Logger.log("2*10 = " + multiply(2, 10)), Logger.log("3*2 = " + multiply(3, 2));
+}, function(module, exports) {
+    Logger.log("Amit Agarwal lives in India");
+}, function(module, exports) {
     var _createClass = function() {
         function defineProperties(target, props) {
             for (var i = 0; i < props.length; i++) {
@@ -231,47 +145,116 @@ function doGet() {
         } ]), Employee;
     }())("Amit", "male", "Google Developer");
     Logger.log(employee.printDetails()), Logger.log(employee.printRole());
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    Logger.log("Amit Agarwal lives in India");
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    Logger.log("The sum of 2 and 3 is " + (2 + 3));
-    Logger.log("The bigger of 10 and 12 is " + function(a, b) {
-        return a > b ? a : b;
-    }(10, 12));
-    var multiply = function(value) {
-        return value * (arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2);
-    };
-    Logger.log("2*10 = " + multiply(2, 10)), Logger.log("3*2 = " + multiply(3, 2));
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    __webpack_require__(9), __webpack_require__(8), __webpack_require__(0), __webpack_require__(7), 
-    __webpack_require__(6), __webpack_require__(5), __webpack_require__(4), __webpack_require__(3), 
-    __webpack_require__(2), __webpack_require__(1);
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: !0
-    });
-    exports.doGet = function() {
-        return Logger.log("index.html"), HtmlService.createHtmlOutputFromFile("index.html").setTitle("Google Apps Script").setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
-    };
 }, function(module, exports) {
-    var g;
-    g = function() {
-        return this;
+    var _slicedToArray = function() {
+        return function(arr, i) {
+            if (Array.isArray(arr)) return arr;
+            if (Symbol.iterator in Object(arr)) return function(arr, i) {
+                var _arr = [], _n = !0, _d = !1, _e = undefined;
+                try {
+                    for (var _s, _i = arr[Symbol.iterator](); !(_n = (_s = _i.next()).done) && (_arr.push(_s.value), 
+                    !i || _arr.length !== i); _n = !0) ;
+                } catch (err) {
+                    _d = !0, _e = err;
+                } finally {
+                    try {
+                        !_n && _i["return"] && _i["return"]();
+                    } finally {
+                        if (_d) throw _e;
+                    }
+                }
+                return _arr;
+            }(arr, i);
+            throw new TypeError("Invalid attempt to destructure non-iterable instance");
+        };
     }();
-    try {
-        g = g || Function("return this")() || (0, eval)("this");
-    } catch (e) {
-        "object" == typeof window && (g = window);
-    }
-    module.exports = g;
-}, function(module, exports, __webpack_require__) {
+    var Person = function Person() {
+        var _this = this;
+        !function(instance, Constructor) {
+            if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+        }(this, Person), this.name = "Amit Agarwal", this.greet = function() {
+            return "Hello " + _this.name + "!!";
+        }, this.getFirstName = function() {
+            var _name$split = _this.name.split(" ");
+            return _slicedToArray(_name$split, 1)[0];
+        };
+    };
+    Person.country = "India", Person.sayHello = function() {
+        Logger.log("Hello World!!");
+    };
+    var person = new Person();
+    Logger.log(person.getFirstName()), Logger.log(Person.country), Person.sayHello();
+}, function(module, exports) {
+    var numbers = [ 10, 20, 30 ];
+    numbers.forEach(function(number) {
+        Logger.log(number);
+    });
+    var doubleIt = numbers.map(function(number) {
+        return 2 * number;
+    });
+    Logger.log(doubleIt);
+    var bigNumbers = numbers.filter(function(number) {
+        return number > 10;
+    });
+    Logger.log(bigNumbers);
+    var sum = numbers.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue;
+    }, 0);
+    Logger.log("The sum of " + numbers.join(", ") + " is " + sum);
+    var result = [ 1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4 ].sort().reduce(function(accumulator, current) {
+        var length = accumulator.length;
+        return 0 !== length && accumulator[length - 1] === current || accumulator.push(current), 
+        accumulator;
+    }, []);
+    Logger.log(result);
+}, function(module, exports) {
+    Logger.log("The name is Amit Agarwal");
+    for (var i = 0; i < 5; i += 1) Logger.log("The count is " + i);
+}, function(module, exports) {
+    var _extends = Object.assign || function(target) {
+        for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) Object.prototype.hasOwnProperty.call(source, key) && (target[key] = source[key]);
+        }
+        return target;
+    }, species = [].concat([ "Monkey", "Lion", "Zebra" ], [ "Sparrow", "Pigeon", "Parrot" ]);
+    Logger.log(species);
+    var personDetails = _extends({}, {
+        name: "Amit Agarwal",
+        email: "amit@labnol.org"
+    }, {
+        url: "https://digitalinspiration.com/"
+    }, {
+        twitter: "@labnol"
+    });
+    Logger.log(personDetails);
+    var emailUpdated = _extends({}, personDetails, {
+        email: "email@example.com"
+    });
+    Logger.log(emailUpdated);
+    var stack = [ "Google Apps Script", "JavaScript", "Firebase", "Node.js", "Webpack", "Babel" ], gas = stack[0], js = stack[1], others = stack.slice(2);
+    Logger.log(gas + " is similar to " + js), Logger.log(others);
+    var newPerson = {
+        name: "Amit Agarwal",
+        email: "amit@labnol.org",
+        website: "https://digitalinspiration.com/"
+    }, name = newPerson.name, _newPerson$age = newPerson.age, age = _newPerson$age === undefined ? "unknown" : _newPerson$age;
+    Logger.log(name + " is " + age + " years old");
+}, function(module, exports) {
+    var name = "Amit Agarwal";
+    Logger.log(name + " has " + name.length + " characters"), Logger.log(name + " in uppercase is  " + name.toUpperCase()), 
+    Logger.log("The date is " + new Date().toUTCString());
+}, function(module, __webpack_exports__, __webpack_require__) {
     "use strict";
-    (function(global) {
-        var _webapp = __webpack_require__(11);
-        __webpack_require__(10), global.doGet = _webapp.doGet;
-    }).call(this, __webpack_require__(12));
+    __webpack_require__(3), __webpack_require__(4);
+    var person = {
+        name: "Amit Agarwal",
+        website: "https://digitalinspiration.com/",
+        email: "amit@labnol.org"
+    }, destructuring_name = person.name, email = person.email, _person$country = person.country, country = _person$country === undefined ? "unknown" : _person$country;
+    Logger.log(destructuring_name + "'s email address is " + email + ". Their country is " + country);
+    var destructuring = person;
+    __webpack_require__(5), __webpack_require__(6);
+    Logger.log(destructuring);
+    __webpack_require__(7), __webpack_require__(8), __webpack_require__(9), __webpack_require__(10);
 } ]));

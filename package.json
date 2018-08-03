@@ -11,10 +11,9 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "prebuild": "npm version --loose-semver --new-version patch",
-    "watch": "webpack --progress --watch",
     "build": "webpack",
-    "deploy": "npm run build && clasp push"
+    "upload": "npx clasp push",
+    "deploy": "npm run build && npm run upload"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@google/clasp": "^1.5.0",
+    "@google/clasp": "~1.4.1",
     "@types/google-apps-script": "0.0.26",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
@@ -50,9 +49,9 @@
     "eslint-plugin-prettier": "^2.6.2",
     "gas-lib": "^2.0.2",
     "gas-webpack-plugin": "^0.3.0",
-    "prettier": "^1.13.7",
+    "prettier": "^1.14.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.1",
+    "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0"
   }
 }
