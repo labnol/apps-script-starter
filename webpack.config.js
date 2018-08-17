@@ -5,9 +5,10 @@ const GasPlugin = require('gas-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const destination = 'dist';
+const mode = 'none'; // or production
 
 module.exports = {
-  mode: 'production',
+  mode,
   context: __dirname,
   entry: './src/index.js',
   output: {
@@ -38,7 +39,8 @@ module.exports = {
     ]
   },
   module: {
-    rules: [{
+    rules: [
+      {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
@@ -59,7 +61,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([destination]),
-    new CopyWebpackPlugin([{
+    new CopyWebpackPlugin([
+      {
         from: './src/**/*.html',
         flatten: true,
         to: path.resolve(__dirname, destination)
