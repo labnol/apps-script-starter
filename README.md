@@ -4,7 +4,7 @@
 
 Use the Apps Script Starter kit to quickly build Google add-ons and web applications with next-generation JavaScript.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-on likes [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Twitter Archiver](https://chrome.google.com/webstore/detail/twitter-archiver/pkanpfekacaojdncfgbjadedbggbbphi?hl=en).
+The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-ons include [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Twitter Archiver](https://chrome.google.com/webstore/detail/twitter-archiver/pkanpfekacaojdncfgbjadedbggbbphi?hl=en).
 
 For help, please contact [Amit Agarwal](https://twitter.com/labnol) amit@labnol.org
 
