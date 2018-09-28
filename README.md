@@ -82,3 +82,5 @@ Contributions and feature requests are welcome. If you are using the Google Apps
 #### License 📄
 
 [MIT License](https://github.com/labnol/apps-script-starter/blob/master/LICENSE) (c) [Amit Agarwal](https://digitalinspiration.com/google-developer)
+
+[![clasp](https://img.shields.io/badge/built%20with-clasp-4285f4.svg)](https://github.com/google/clasp)
