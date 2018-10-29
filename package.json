@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "A starter kit for creating Google Apps Script project with modern JavaScript",
   "author": {
     "name": "Amit Agarwal",
@@ -32,16 +32,17 @@
     "@babel/plugin-transform-member-expression-literals": "^7.0.0",
     "@babel/plugin-transform-object-assign": "^7.0.0",
     "@babel/plugin-transform-property-literals": "^7.0.0",
+    "babel-plugin-array-includes": "^2.0.3",
     "@babel/preset-env": "^7.1.0",
-    "@google/clasp": "^1.6.0",
-    "@types/google-apps-script": "^0.0.28",
+    "@google/clasp": "^1.6.3",
+    "@types/google-apps-script": "^0.0.31",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-add-module-exports": "^1.0.0",
     "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.5.2",
+    "copy-webpack-plugin": "^4.5.4",
     "dayjs": "^1.7.7",
-    "eslint": "^5.6.1",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-loader": "^2.1.1",
@@ -52,7 +53,7 @@
     "gas-webpack-plugin": "^0.3.0",
     "prettier": "^1.14.3",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.20.2",
+    "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
 }
