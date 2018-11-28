@@ -3,21 +3,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const dayjs = require('dayjs');
+const { version } = require('./package.json');
 
 const destination = 'dist';
 const mode = 'none'; // or production
-const getFileName = () => {
-  const dt = dayjs().format('MMM-DD-HHmm');
-  return `code-${dt}.js`;
-};
 
 module.exports = {
   mode,
   context: __dirname,
   entry: './src/index.js',
   output: {
-    filename: getFileName(),
+    filename: `code-${version}.js`,
     path: path.resolve(__dirname, destination),
     libraryTarget: 'this'
   },
