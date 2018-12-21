@@ -73,6 +73,8 @@ module.exports = {
         to: path.resolve(__dirname, destination)
       }
     ]),
-    new GasPlugin()
+    new GasPlugin({
+      comments: false
+    })
   ]
 };
