@@ -71,7 +71,7 @@ The `dist` directory contains the bundled code that is pushed to Google Apps Scr
 
 ## About the Developer 👨🏼‍💻
 
-[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows enhance productivity. 
+[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. 
 
 Reach him on [Twitter](https://twitter.com/labnol) or email amit@labnol.org
 
