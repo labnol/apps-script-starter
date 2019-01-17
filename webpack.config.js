@@ -1,3 +1,12 @@
+/**
+ * @file webpack.config.js
+ * @author Amit Agarwal
+ * @email amit@labnol.org
+ *
+ * Google Apps Script Starter Kit
+ * https://github.com/labnol/apps-script-starter
+ */
+
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
