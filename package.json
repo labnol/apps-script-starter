@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "A starter kit for creating Google Apps Script projects with modern JavaScript and Visual Studio Code",
   "author": {
     "name": "Amit Agarwal",
@@ -34,7 +34,7 @@
     "@babel/plugin-transform-property-literals": "^7.2.0",
     "babel-plugin-array-includes": "^2.0.3",
     "@babel/preset-env": "^7.2.3",
-    "@google/clasp": "^1.7.0",
+    "@google/clasp": "^2.0.0",
     "@types/google-apps-script": "^0.0.35",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
@@ -49,7 +49,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.1",
     "gas-lib": "^2.0.2",
-    "gas-webpack-plugin": "^1.0.1",
+    "gas-webpack-plugin": "^0.3.0",
     "prettier": "^1.15.3",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.4",
