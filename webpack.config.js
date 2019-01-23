@@ -15,7 +15,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { version } = require('./package.json');
 
 const destination = 'dist';
-const mode = 'none'; // or production
+const mode = 'production'; // or none
 
 module.exports = {
   mode,
