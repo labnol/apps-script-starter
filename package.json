@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "2.7.0",
+  "version": "2.8.1",
   "description": "A starter kit for creating Google Apps Script projects with modern JavaScript and Visual Studio Code",
   "author": {
     "name": "Amit Agarwal",
@@ -28,31 +28,31 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@babel/plugin-transform-member-expression-literals": "^7.2.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/plugin-transform-property-literals": "^7.2.0",
     "babel-plugin-array-includes": "^2.0.3",
     "@babel/preset-env": "^7.3.1",
     "@google/clasp": "^2.0.1",
-    "@types/google-apps-script": "^0.0.35",
+    "@types/google-apps-script": "^0.0.37",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-add-module-exports": "^1.0.0",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-loader": "^2.1.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-googleappsscript": "^1.0.1",
-    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
     "gas-lib": "^2.0.2",
     "gas-webpack-plugin": "^1.0.2",
-    "prettier": "^1.16.1",
+    "prettier": "^1.16.4",
     "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3"
   }
 }
