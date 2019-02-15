@@ -4,7 +4,7 @@
 
 Use the Apps Script Starter kit to quickly build Google add-ons and web applications with next-generation JavaScript.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-ons include [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Twitter Archiver](https://chrome.google.com/webstore/detail/twitter-archiver/pkanpfekacaojdncfgbjadedbggbbphi?hl=en).
+The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-ons include [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
 For help, please contact [Amit Agarwal](https://twitter.com/labnol) amit@labnol.org
 
@@ -48,8 +48,8 @@ Setting up a modern development environment for building Google Apps Script proj
 
 1\. Clone the repository and install npm dependencies
 ```
-git clone https://github.com/labnol/apps-script-starter
-cd apps-script-starter 
+git clone --depth 1 https://github.com/labnol/apps-script-starter my-project
+cd my-project
 npm install
 ```        
 
