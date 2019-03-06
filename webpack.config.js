@@ -70,7 +70,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([destination]),
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
         from: './src/**/*.html',
