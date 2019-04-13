@@ -51,7 +51,7 @@ Setting up a modern development environment for building Google Apps Script proj
 git clone https://github.com/labnol/apps-script-starter my-project
 cd my-project
 rm -rf .git
-git ini
+git init
 npm install
 ```
 
@@ -62,7 +62,7 @@ npx clasp login
 
 3\. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
 ```
-npx clasp create --type sheets --title "My First Apps Script Project" --rootDir ./dist
+npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
 4\. Include the necessary OAuth Scopes in the appsscript.json file

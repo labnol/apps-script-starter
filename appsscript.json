@@ -13,11 +13,6 @@
       }
     ],
     "libraries": [{
-        "userSymbol": "FirebaseApp",
-        "libraryId": "1hguuh4Zx72XVC1Zldm_vTtcUUKUA6iBUOoGnJUWLfqDWx5WlOJHqYkrt",
-        "version": "29"
-      },
-      {
         "userSymbol": "OAuth1",
         "libraryId": "1CXDCY5sqT9ph64fFwSzVtXnbjpSfWdRymafDrtIZ7Z_hwysTY7IIhi7s",
         "version": "16"
@@ -25,7 +20,7 @@
       {
         "userSymbol": "OAuth2",
         "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
-        "version": "31"
+        "version": "32"
       }
     ]
   },
@@ -35,6 +30,9 @@
   },
   "exceptionLogging": "STACKDRIVER",
   "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.send",
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/gmail.settings.basic",
     "https://www.googleapis.com/auth/drive",
     "https://www.googleapis.com/auth/script.external_request",
     "https://www.googleapis.com/auth/script.scriptapp",
@@ -42,6 +40,7 @@
     "https://www.googleapis.com/auth/script.storage",
     "https://www.googleapis.com/auth/script.webapp.deploy",
     "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/userinfo.email"
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/script.container.ui"
   ]
 }
