@@ -46,19 +46,24 @@ Developers have their own unique style of writing code. AirBnB's JavaScript styl
 
 Setting up a modern development environment for building Google Apps Script projects is easy and quick. You also need to install Node.js which includes the npm package manager.
 
-1\. Clone the repository and install npm dependencies
+1\. Clone the repository, remove the git history and install npm dependencies
 ```
-git clone --depth 1 https://github.com/labnol/apps-script-starter my-project
+git clone https://github.com/labnol/apps-script-starter my-project
 cd my-project
+rm -rf .git
+git ini
 npm install
-```        
+```
 
 2\. Log in to Google clasp and authorize with your Google account.
 ```
 npx clasp login
 ```
 
-3\. Replace the "scriptId" value in the .clasp.json file.
+3\. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
+```
+npx clasp create --type sheets --title "My First Apps Script Project" --rootDir ./dist
+```
 
 4\. Include the necessary OAuth Scopes in the appsscript.json file
 
@@ -66,12 +71,12 @@ npx clasp login
 ```
 npm run deploy
 ```
-          
+
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
 ## About the Developer 👨🏼‍💻
 
-[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. 
+[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
 
 Reach him on [Twitter](https://twitter.com/labnol) or email amit@labnol.org
 
