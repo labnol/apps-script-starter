@@ -1,14 +1,14 @@
 ![Google Apps Script Development with ES6](https://digitalinspiration.com/images/google-apps-script-development.png)
 
-## Google Apps Script 💯
+## Google Apps Script Development 💯
 
-Use the Apps Script Starter kit to quickly build Google add-ons and web applications with next-generation JavaScript.
+Please follow the  👉 **[step-by-step video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)** 👈 for quickly getting started with Apps Script development inside Visual Studio Code. You can build GSuite add-ons, web applications and workflow automation routines with next-generation JavaScript.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-ons include [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
-For help, please contact [Amit Agarwal](https://twitter.com/labnol) amit@labnol.org
+The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building Google add-ons including [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
-## Developing with Apps Script 🚀
+
+## Build with Google Apps Script 🚀
 
 The Apps Script Starter kit makes it easy for you to quickly setup a modern development environment and build workflow. Here's everything that's included in the starter kit to get you started:
 
@@ -16,13 +16,13 @@ The Apps Script Starter kit makes it easy for you to quickly setup a modern deve
 
 Write code using ES6 features like arrow functions, destructuring, classes, template literals, and the Babel transpiler will transform your ECMAScript 2015/2017 code to ES5 that Apps Script can understand.
 
-#### ESLint
-
-A popular linting engine that analyzes your JavaScript code for correctness and highlights the errors in real time before you even compile the code, thus reducing the development time.
-
 #### Webpack
 
 Webpack is a powerful tool for bundling JavaScript modules. Developers can structure code in directory and Webpack creates a minimized and optimized bundle for pushing to production.
+
+#### ESLint
+
+A popular linting engine that analyzes your JavaScript code for correctness and highlights the errors in real time before you even compile the code, thus reducing the development time.
 
 #### Google CLASP
 
@@ -44,7 +44,7 @@ Developers have their own unique style of writing code. AirBnB's JavaScript styl
 
 ![Google Apps Script - Setup Development Environment](https://www.labnol.org/media/npm-install.gif)
 
-Setting up a modern development environment for building Google Apps Script projects is easy and quick. You also need to install Node.js which includes the npm package manager.
+Setting up a modern development environment for building Google Apps Script projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**). You also need to install Node.js which includes the npm package manager.
 
 1\. Clone the repository, remove the git history and install npm dependencies
 ```
