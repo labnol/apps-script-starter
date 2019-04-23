@@ -1,5 +1,4 @@
 /* Array functions */
-
 const numbers = [10, 20, 30];
 
 /* Print the nubmers */

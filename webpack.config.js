@@ -14,16 +14,18 @@ const GasPlugin = require('gas-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { version } = require('./package.json');
 
-const destination = 'dist';
-const mode = 'production'; // or none
+const mode = 'none'; // or production
+
+const src = path.resolve(__dirname, 'src');
+const destination = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode,
   context: __dirname,
-  entry: './src/index.js',
+  entry: `${src}/index.js`,
   output: {
     filename: `code-${version}.js`,
-    path: path.resolve(__dirname, destination),
+    path: destination,
     libraryTarget: 'this'
   },
   resolve: {
@@ -73,13 +75,13 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
-        from: './src/**/*.html',
+        from: `${src}/**/*.html`,
         flatten: true,
-        to: path.resolve(__dirname, destination)
+        to: destination
       },
       {
-        from: './appsscript.json',
-        to: path.resolve(__dirname, destination)
+        from: `${src}/../appsscript.json`,
+        to: destination
       }
     ]),
     new GasPlugin({

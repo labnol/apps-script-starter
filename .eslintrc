@@ -2,12 +2,12 @@
   "root": true,
   "parser": "babel-eslint",
   "extends": [
-    "eslint:recommended", 
-    "airbnb-base", 
+    "eslint:recommended",
+    "airbnb-base",
     "plugin:prettier/recommended"
   ],
   "plugins": [
-    "prettier", 
+    "prettier",
     "googleappsscript"
   ],
   "env": {
@@ -15,11 +15,11 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": "error"
   },
   "globals": {
     "CardService": true,
-    "Gmail": true, 
+    "Gmail": true,
     "Drive": true,
     "Slides": true,
     "OAuth1": true,
