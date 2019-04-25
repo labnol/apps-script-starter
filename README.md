@@ -32,9 +32,9 @@ This incredibly powerful source code editor from Microsoft provides an integrate
 
 A code formatter that will beautify your JavaScript, JSON, HTML and CSS stylesheets according to a set of rules and styles widely accepted by programmers.
 
-#### AirBnB
+#### Airbnb
 
-Developers have their own unique style of writing code. AirBnB's JavaScript style guide outlines how JavaScript code should be written and adheres to the rules.
+Developers have their own unique style of writing code. [Airbnb's JavaScript style guide](https://github.com/airbnb/javascript/blob/master/README.md#airbnb-javascript-style-guide-) outlines how JavaScript code should be written and adheres to the rules.
 
 ## Getting Started 🏃🏼
 
