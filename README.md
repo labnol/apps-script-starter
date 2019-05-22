@@ -6,7 +6,7 @@ Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/w
 
 ## Build with Google Apps Script 🚀
 
-The Apps Script Starter kit makes it easy for you to quickly setup a modern development environment and build workflow. Here's everything that's included in the starter kit to get you started:
+The Apps Script Starter kit makes it easy for you to setup a modern development environment and build workflow. Here's everything that's included in the starter kit to get you started:
 
 #### Babel
 
@@ -43,6 +43,7 @@ Developers have their own unique style of writing code. [Airbnb's JavaScript sty
 Setting up a modern development environment for building Google Apps Script projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**). You also need to install Node.js which includes the npm package manager.
 
 1\. Clone the repository and install npm dependencies
+
 ```
 git clone https://github.com/labnol/apps-script-starter my-project
 cd my-project
@@ -50,11 +51,13 @@ npm install
 ```
 
 2\. Log in to Google clasp and authorize with your Google account.
+
 ```
 npx clasp login
 ```
 
 3\. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
+
 ```
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
@@ -62,6 +65,7 @@ npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 4\. Include the necessary [OAuth Scopes](https://github.com/labnol/apps-script-starter/blob/master/scopes.md) in the [appsscript.json](https://github.com/labnol/apps-script-starter/blob/master/appsscript.json) file
 
 5\. Deploy the project
+
 ```
 npm run deploy
 ```
@@ -82,7 +86,7 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
-Reach him on [Twitter](https://twitter.com/labnol) or email amit@labnol.org
+Reach the author on [Twitter](https://twitter.com/labnol) or email amit@labnol.org
 
 ### Contributions 🙏🏼
 
