@@ -42,12 +42,10 @@ Developers have their own unique style of writing code. [Airbnb's JavaScript sty
 
 Setting up a modern development environment for building Google Apps Script projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**). You also need to install Node.js which includes the npm package manager.
 
-1\. Clone the repository, remove the git history and install npm dependencies
+1\. Clone the repository and install npm dependencies
 ```
 git clone https://github.com/labnol/apps-script-starter my-project
 cd my-project
-rm -rf .git
-git init
 npm install
 ```
 
@@ -61,7 +59,7 @@ npx clasp login
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
-4\. Include the necessary OAuth Scopes in the appsscript.json file
+4\. Include the necessary [OAuth Scopes](https://github.com/labnol/apps-script-starter/blob/master/scopes.md) in the [appsscript.json](https://github.com/labnol/apps-script-starter/blob/master/appsscript.json) file
 
 5\. Deploy the project
 ```
