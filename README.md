@@ -72,6 +72,12 @@ npm run deploy
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
+### The .claspignore file
+
+The `.claspignore` file allows you to specify file and directories that you do not wish to not upload to your Google Apps Script project via `clasp push`.
+
+The default `.claspignore` file of the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
+
 ### Using Git with Google Apps Script
 
 ![Google Apps Script - Github](https://www.labnol.org/media/github-apps-script.png)
@@ -80,7 +86,7 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 ## About the Developer 👨🏼‍💻
 
-<img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1120678435960033285/tNRyTX2r_200x200.png">
+<img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
 
 [Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
 
