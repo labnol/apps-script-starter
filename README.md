@@ -78,6 +78,27 @@ The `.claspignore` file allows you to specify file and directories that you do n
 
 The default `.claspignore` file of the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
 
+### The .eslintrc file
+
+This build uses [eslint-plugin-googleappsscript](https://github.com/selectnull/eslint-plugin-googleappsscript) to declare global runtime variables. This plugin does not extended by Advanced Services. Therefore, when building, you may receive the message `no-undef`:
+
+```sh
+< /tmp/my-project/src/index.js
+    10:12 error 'YouTube' is not defined no-undef
+```
+
+For resolve this declare the Advanced Service for correct build in the .eslintrc file
+
+```json
+{
+  ...
+  "globals": {
+    ...
+    "YouTube": false
+  }
+}
+```
+
 ### Using Git with Google Apps Script
 
 ![Google Apps Script - Github](https://www.labnol.org/media/github-apps-script.png)
