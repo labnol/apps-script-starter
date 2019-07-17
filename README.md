@@ -6,6 +6,8 @@ Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/w
 
 ## Build with Google Apps Script 🚀
 
+<img alt="Google Developers Expert - Google Apps Script, GSuite" align="right" height="150" src="https://i.imgur.com/4URbCoDl.png">
+
 The Apps Script Starter kit makes it easy for you to setup a modern development environment and build workflow. Here's everything that's included in the starter kit to get you started:
 
 #### Babel
@@ -88,7 +90,7 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
 
-[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
+[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
 
 The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
