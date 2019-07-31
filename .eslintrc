@@ -18,17 +18,6 @@
     "import/prefer-default-export": "error"
   },
   "globals": {
-    "CardService": true,
-    "Gmail": true,
-    "Calendar": true,
-    "YouTube": true,
-    "Drive": true,
-    "Docs": true,
-    "Sheets": true,
-    "Slides": true,
-    "BigQuery": true,
-    "Analytics": true,
-    "AdSense": true,
     "OAuth1": true,
     "OAuth2": true,
     "FirebaseApp": true
