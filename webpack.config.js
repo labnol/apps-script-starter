@@ -14,13 +14,16 @@ const GasPlugin = require('gas-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { version } = require('./package.json');
 
-const mode = 'none'; // or production
+const MODE = {
+  DEVELOPMENT: 'none',
+  PRODUCTION: 'production'
+};
 
 const src = path.resolve(__dirname, 'src');
 const destination = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  mode,
+  mode: MODE.DEVELOPMENT,
   context: __dirname,
   entry: `${src}/index.js`,
   output: {
@@ -86,7 +89,8 @@ module.exports = {
       }
     ]),
     new GasPlugin({
-      comments: false
+      comments: false,
+      source: 'digitalinspiration.com'
     })
   ]
 };

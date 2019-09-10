@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 class Person {
   constructor(name = 'Anonymous', gender = 'Unknown') {
     this.name = name;
@@ -24,5 +25,6 @@ class Employee extends Person {
 }
 
 const employee = new Employee('Amit', 'male', 'Google Developer');
+
 Logger.log(employee.printDetails());
 Logger.log(employee.printRole());
