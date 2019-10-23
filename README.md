@@ -40,13 +40,23 @@ npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 
 4\. Include the necessary [OAuth Scopes](https://github.com/labnol/apps-script-starter/blob/master/scopes.md) in the [appsscript.json](https://github.com/labnol/apps-script-starter/blob/master/appsscript.json) file
 
-5\. Deploy the project
+5\. Deploy the project (development)
 
 ```
 npm run deploy
 ```
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
+
+6\. Deploy the project (production mode)
+
+```
+npm run deploy:prod
+```
+
+#### Development vs Production mode
+
+In the production mode, the function names and variable names are shrinked and the output code is auto-minifed. The production mode is not recommended for testing and debugging the Apps Script code.
 
 ### The .claspignore file
 

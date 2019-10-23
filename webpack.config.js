@@ -14,16 +14,12 @@ const GasPlugin = require('gas-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { version } = require('./package.json');
 
-const MODE = {
-  DEVELOPMENT: 'none',
-  PRODUCTION: 'production'
-};
-
 const src = path.resolve(__dirname, 'src');
 const destination = path.resolve(__dirname, 'dist');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  mode: MODE.DEVELOPMENT,
+  mode: isProduction ? 'production' : 'none',
   context: __dirname,
   entry: `${src}/index.js`,
   output: {
@@ -43,11 +39,11 @@ module.exports = {
           mangle: false,
           compress: {
             properties: false,
-            warnings: false,
-            drop_console: false
+            drop_console: false,
+            drop_debugger: isProduction
           },
           output: {
-            beautify: true
+            beautify: !isProduction
           }
         }
       })
