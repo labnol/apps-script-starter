@@ -42,9 +42,9 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-googleappsscript": "^1.0.3",
     "eslint-plugin-import": "^2.18.2",
@@ -54,7 +54,7 @@
     "prettier": "^1.18.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "cross-env": "^6.0.3"
   }
 }
