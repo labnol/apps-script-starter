@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "3.13.0",
+  "version": "3.14.0",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
     "name": "Amit Agarwal",
@@ -33,10 +33,11 @@
     "@babel/plugin-transform-member-expression-literals": "^7.7.4",
     "@babel/plugin-transform-object-assign": "^7.7.4",
     "@babel/plugin-transform-property-literals": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "babel-plugin-array-includes": "^2.0.3",
     "@babel/preset-env": "^7.7.7",
     "@google/clasp": "^2.3.0",
-    "@types/google-apps-script": "^1.0.7",
+    "@types/google-apps-script": "^1.0.8",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
