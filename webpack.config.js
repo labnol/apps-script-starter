@@ -11,7 +11,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const { version } = require('./package.json');
 
 const src = path.resolve(__dirname, 'src');
@@ -32,8 +32,8 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new UglifyJSPlugin({
-        uglifyOptions: {
+      new TerserPlugin({
+        terserOptions: {
           ie8: true,
           warnings: false,
           mangle: false,

@@ -38,7 +38,7 @@ npx clasp login
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
-4\. Include the necessary [OAuth Scopes](https://github.com/labnol/apps-script-starter/blob/master/scopes.md) in the [appsscript.json](https://github.com/labnol/apps-script-starter/blob/master/appsscript.json) file
+4\. Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
 
 5\. Deploy the project (development)
 
@@ -74,7 +74,7 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
 
-[Amit Agarwal](https://digitalinspiration.com/google-developer) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
+[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
 
 The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
 
