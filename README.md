@@ -8,17 +8,17 @@ Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/w
 
 You can build GSuite add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
 
+The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://gsuite.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://gsuite.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://gsuite.google.com/marketplace/app/document_studio/429444628321).
+
 ## Build with Google Apps Script 🚀
 
 Setting up a modern development environment for building [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**).
 
 You also need to install Node.js which includes the npm package manager.
 
-![Google Apps Script - Setup Development Environment](images/npm-install.gif)
-
 ### :package: Getting Started
 
-1. Clone the repository and install npm dependencies
+**1.** Clone the repository and install npm dependencies and [utilities](TOOLS.md).
 
 ```
 git clone https://github.com/labnol/apps-script-starter my-project
@@ -26,21 +26,21 @@ cd my-project
 npm install
 ```
 
-2. Log in to Google clasp and authorize with your Google account.
+**2.** Log in to Google clasp and authorize with your Google account.
 
 ```
 npx clasp login
 ```
 
-3. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
+**3.** Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
 
 ```
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
-4. Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
+**4.** Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
 
-5. Deploy the project (development)
+1. Deploy the project (development)
 
 ```
 npm run deploy
@@ -48,11 +48,13 @@ npm run deploy
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
-6. Deploy the project (production mode)
+**6.** Deploy the project (production mode)
 
 ```
 npm run deploy:prod
 ```
+
+![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
 #### Development vs Production mode
 
@@ -74,41 +76,9 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
 
-[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
+[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://gsuite.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://gsuite.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://gsuite.google.com/marketplace/app/document_studio/429444628321).
-
-Reach the author on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
-
-### :star2: Credit/Acknowledgment
-
-#### Babel
-
-Write code using ES6 features like arrow functions, destructuring, classes, template literals, and the Babel transpiler will transform your ECMAScript 2015/2017 code to ES5 that Apps Script can understand.
-
-#### Webpack
-
-Webpack is a powerful tool for bundling JavaScript modules. Developers can structure code in directory and Webpack creates a minimized and optimized bundle for pushing to production.
-
-#### ESLint
-
-A popular linting engine that analyzes your JavaScript code for correctness and highlights the errors in real time before you even compile the code, thus reducing the development time.
-
-#### Google CLASP
-
-A command line utility for working with Google Apps Script projects. You can develop code locally and push it to production, manage your manifest file, deploy web apps and publish new versions of apps.
-
-#### Visual Studio Code
-
-This incredibly powerful source code editor from Microsoft provides an integrated development environment and has built-in support for Emmet, Intellisense for code autocompletion, Command Line Terminal, Git integration, Node.js , TypeScript and more.
-
-#### Prettier
-
-A code formatter that will beautify your JavaScript, JSON, HTML and CSS stylesheets according to a set of rules and styles widely accepted by programmers.
-
-#### Airbnb
-
-Developers have their own unique style of writing code. [Airbnb's JavaScript style guide](https://github.com/airbnb/javascript/blob/master/README.md#airbnb-javascript-style-guide-) outlines how JavaScript code should be written and adheres to the rules.
+He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
 
 ### :cherry_blossom: Contribution
 
