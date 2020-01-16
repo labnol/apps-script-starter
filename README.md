@@ -1,4 +1,4 @@
-![Google Apps Script Development with ES6](https://digitalinspiration.com/images/google-apps-script-development.png)
+![Google Apps Script Development with ES6](images/google-apps-script-development.png)
 
 ## Google Apps Script Development 💯
 
@@ -10,15 +10,15 @@ You can build GSuite add-ons (for Google Docs, Slides, Gmail and Google Sheets),
 
 ## Build with Google Apps Script 🚀
 
-Setting up a modern development environment for building Google Apps Script projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**).
+Setting up a modern development environment for building [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**).
 
 You also need to install Node.js which includes the npm package manager.
 
-![Google Apps Script - Setup Development Environment](https://www.labnol.org/media/npm-install.gif)
+![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
 ### :package: Getting Started
 
-1\. Clone the repository and install npm dependencies
+1. Clone the repository and install npm dependencies
 
 ```
 git clone https://github.com/labnol/apps-script-starter my-project
@@ -26,21 +26,21 @@ cd my-project
 npm install
 ```
 
-2\. Log in to Google clasp and authorize with your Google account.
+2. Log in to Google clasp and authorize with your Google account.
 
 ```
 npx clasp login
 ```
 
-3\. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
+3. Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
 
 ```
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
-4\. Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
+4. Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
 
-5\. Deploy the project (development)
+5. Deploy the project (development)
 
 ```
 npm run deploy
@@ -48,7 +48,7 @@ npm run deploy
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
 
-6\. Deploy the project (production mode)
+6. Deploy the project (production mode)
 
 ```
 npm run deploy:prod
@@ -66,7 +66,7 @@ The default `.claspignore` file of the Apps Script Starter kit will push all the
 
 ## :beginner: Using Git with Google Apps Script
 
-![Google Apps Script - Github](https://www.labnol.org/media/github-apps-script.png)
+![Google Apps Script - Github](images/github-apps-script.png)
 
 Create a new repository in Github and make a note of the URL of the new repository. Next, open the terminal and run the above commands to push your Apps Script project to Github.
 
@@ -76,9 +76,9 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 [Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website. He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp), [Google Forms Notifications](https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm) and [Document Studio](https://chrome.google.com/webstore/detail/document-studio/nhgeilcelhkmajkfgmgldbinmgjjajlb).
+The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://gsuite.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://gsuite.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://gsuite.google.com/marketplace/app/document_studio/429444628321).
 
-Reach the author on [Twitter](https://twitter.com/labnol) or email amit@labnol.org
+Reach the author on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
 
 ### :star2: Credit/Acknowledgment
 
@@ -116,4 +116,4 @@ Contributions and feature requests are welcome. If you are using the Google Apps
 
 ### :lock: License
 
-[MIT License](https://github.com/labnol/apps-script-starter/blob/master/LICENSE) (c) [Amit Agarwal](https://digitalinspiration.com/google-developer)
+[MIT License](https://github.com/labnol/apps-script-starter/blob/master/LICENSE) (c) [Amit Agarwal](https://www.labnol.org/about/)
