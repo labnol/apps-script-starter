@@ -58,13 +58,13 @@ npm run deploy:prod
 
 #### Development vs Production mode
 
-In the production mode, the function names and variable names are shrinked and the output code is auto-minifed. The production mode is not recommended for testing and debugging the Apps Script code.
+In production mode, the function names and variable names are shrinked and the output code is auto-minified. The production flag is not recommended for testing and debugging the Apps Script code.
 
 ### The .claspignore file
 
 The `.claspignore` file allows you to specify file and directories that you do not wish to not upload to your Google Apps Script project via `clasp push`.
 
-The default `.claspignore` file of the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
+The default `.claspignore` file in the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
 
 ## :beginner: Using Git with Google Apps Script
 
