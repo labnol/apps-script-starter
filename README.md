@@ -1,8 +1,8 @@
+# Google Apps Script Development 💯
+
+The Google Apps Script Starker kit supports the new **V8 JavaScript runtime** that powers Chrome and Node.js. You can write code using modern ECMAScript syntax like Arrow functions, Classes, Template Literals, Destructuring and more.
+
 ![Google Apps Script Development with ES6](images/google-apps-script-development.png)
-
-## Google Apps Script Development 💯
-
-<img alt="Google Developers Expert - Google Apps Script, GSuite" align="right" height="125" src="https://i.imgur.com/4URbCoDl.png">
 
 Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)** 👈 for quickly getting started with Apps Script development inside Visual Studio Code.
 
@@ -26,7 +26,7 @@ cd my-project
 npm install
 ```
 
-**2.** Log in to Google clasp and authorize with your Google account.
+**2.** Log in to Google clasp and authorize using your Google account.
 
 ```
 npx clasp login
@@ -55,6 +55,12 @@ npm run deploy:prod
 ```
 
 ![Google Apps Script - Setup Development Environment](images/npm-install.gif)
+
+#### Enable JavaScript v8 Runtim
+
+Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
+
+![Google Apps Script - v8 Runtime](images/apps-script-v8.png)
 
 #### Development vs Production mode
 

@@ -1,7 +1,9 @@
 {
   "timeZone": "Asia/Calcutta",
+  "runtimeVersion": "v8",
   "dependencies": {
-    "enabledAdvancedServices": [{
+    "enabledAdvancedServices": [
+      {
         "userSymbol": "Gmail",
         "serviceId": "gmail",
         "version": "v1"
@@ -12,7 +14,8 @@
         "version": "v2"
       }
     ],
-    "libraries": [{
+    "libraries": [
+      {
         "userSymbol": "OAuth1",
         "libraryId": "1CXDCY5sqT9ph64fFwSzVtXnbjpSfWdRymafDrtIZ7Z_hwysTY7IIhi7s",
         "version": "16"

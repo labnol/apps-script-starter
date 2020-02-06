@@ -34,11 +34,9 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          ie8: true,
           warnings: false,
           mangle: false,
           compress: {
-            properties: false,
             drop_console: false,
             drop_debugger: isProduction
           },
