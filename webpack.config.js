@@ -31,11 +31,13 @@ module.exports = {
     extensions: ['.js']
   },
   optimization: {
+    minimize: isProduction,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          ecma: 6,
           warnings: false,
-          mangle: false,
+          mangle: {},
           compress: {
             drop_console: false,
             drop_debugger: isProduction

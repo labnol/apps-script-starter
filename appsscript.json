@@ -1,6 +1,6 @@
 {
   "timeZone": "Asia/Calcutta",
-  "runtimeVersion": "v8",
+  "runtimeVersion": "V8",
   "dependencies": {
     "enabledAdvancedServices": [
       {
@@ -18,12 +18,12 @@
       {
         "userSymbol": "OAuth1",
         "libraryId": "1CXDCY5sqT9ph64fFwSzVtXnbjpSfWdRymafDrtIZ7Z_hwysTY7IIhi7s",
-        "version": "16"
+        "version": "18"
       },
       {
         "userSymbol": "OAuth2",
         "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
-        "version": "33"
+        "version": "35"
       }
     ]
   },
