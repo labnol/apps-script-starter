@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
     "name": "Amit Agarwal",
@@ -25,7 +25,9 @@
     "gsuite",
     "apps-script"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "crypto-js": "3.1.9-1"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -38,7 +40,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
-    "cross-env": "^7.0.1",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
