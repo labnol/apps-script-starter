@@ -3,7 +3,11 @@
     [
       "@babel/preset-env",
       {
-        "modules": false
+        "targets": {
+          "esmodules": true
+        },
+        // will be default in babel 8
+        "bugfixes": true
       }
     ]
   ],
