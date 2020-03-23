@@ -2,16 +2,16 @@
 const numbers = [10, 20, 30];
 
 /* Print the nubmers */
-numbers.forEach(number => {
+numbers.forEach((number) => {
   Logger.log(number);
 });
 
 /* Double the numbers */
-const doubleIt = numbers.map(number => number * 2);
+const doubleIt = numbers.map((number) => number * 2);
 Logger.log(doubleIt);
 
 /* Only numbers > 10 */
-const bigNumbers = numbers.filter(number => number > 10);
+const bigNumbers = numbers.filter((number) => number > 10);
 Logger.log(bigNumbers);
 
 /* Add the numbers */

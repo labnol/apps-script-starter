@@ -2,8 +2,8 @@ const person = {
   name: 'Amit Agarwal',
   gender: 'Male',
   address: {
-    country: 'India'
-  }
+    country: 'India',
+  },
 };
 
 Logger.log(person?.gender || 'Data not available');

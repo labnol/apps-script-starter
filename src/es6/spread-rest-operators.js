@@ -5,24 +5,24 @@ Logger.log(species);
 
 const person = {
   name: 'Amit Agarwal',
-  email: 'amit@labnol.org'
+  email: 'amit@labnol.org',
 };
 
 const website = {
-  url: 'https://digitalinspiration.com/'
+  url: 'https://digitalinspiration.com/',
 };
 
 const personDetails = {
   ...person,
   ...website,
-  twitter: '@labnol'
+  twitter: '@labnol',
 };
 Logger.log(personDetails);
 
 /* Update the email address only */
 const emailUpdated = {
   ...personDetails,
-  email: 'email@example.com'
+  email: 'email@example.com',
 };
 Logger.log(emailUpdated);
 
@@ -36,7 +36,7 @@ Logger.log(others);
 const newPerson = {
   name: 'Amit Agarwal',
   email: 'amit@labnol.org',
-  website: 'https://digitalinspiration.com/'
+  website: 'https://digitalinspiration.com/',
 };
 
 const { name, age = 'unknown' } = newPerson;

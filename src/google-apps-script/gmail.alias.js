@@ -3,7 +3,7 @@ const getGmailAliases = () => {
   try {
     const { sendAs = [] } = Gmail.Users.Settings.SendAs.list('me');
     if (sendAs.length) {
-      return sendAs.map(alias => alias.sendAsEmail);
+      return sendAs.map((alias) => alias.sendAsEmail);
     }
   } catch (f) {
     console.error(f);

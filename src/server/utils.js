@@ -3,7 +3,7 @@ const ONE_MINUTE = ONE_SECOND * 60;
 const START_TIME = Date.now();
 const MAX_RETRIES = 5;
 
-const expBackoff = func => {
+const expBackoff = (func) => {
   for (let n = 0; n <= MAX_RETRIES; n += 1) {
     try {
       return func();
