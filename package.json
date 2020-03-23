@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "4.7.0",
+  "version": "4.8.0",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
     "name": "Amit Agarwal",
