@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "4.8.0",
+  "version": "4.9.0",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
     "name": "Amit Agarwal",
@@ -49,9 +49,9 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "gas-webpack-plugin": "^1.0.2",
-    "prettier": "^2.0.1",
+    "prettier": "^2.0.2",
     "terser-webpack-plugin": "^2.3.5",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }
 }
