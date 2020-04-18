@@ -12,7 +12,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const { version } = require('./package.json');
 
 const src = path.resolve(__dirname, 'src');
 const destination = path.resolve(__dirname, 'dist');
@@ -23,12 +22,12 @@ module.exports = {
   context: __dirname,
   entry: `${src}/index.js`,
   output: {
-    filename: `code-${version}.js`,
+    filename: `code.[contentHash].js`,
     path: destination,
-    libraryTarget: 'this'
+    libraryTarget: 'this',
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
   },
   optimization: {
     minimize: isProduction,
@@ -40,14 +39,14 @@ module.exports = {
           mangle: {},
           compress: {
             drop_console: false,
-            drop_debugger: isProduction
+            drop_debugger: isProduction,
           },
           output: {
-            beautify: !isProduction
-          }
-        }
-      })
-    ]
+            beautify: !isProduction,
+          },
+        },
+      }),
+    ],
   },
   module: {
     rules: [
@@ -59,17 +58,17 @@ module.exports = {
         options: {
           cache: true,
           failOnError: false,
-          fix: true
-        }
+          fix: true,
+        },
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -77,16 +76,16 @@ module.exports = {
       {
         from: `${src}/**/*.html`,
         flatten: true,
-        to: destination
+        to: destination,
       },
       {
         from: `${src}/../appsscript.json`,
-        to: destination
-      }
+        to: destination,
+      },
     ]),
     new GasPlugin({
       comments: false,
-      source: 'digitalinspiration.com'
-    })
-  ]
+      source: 'digitalinspiration.com',
+    }),
+  ],
 };
