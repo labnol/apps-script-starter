@@ -72,17 +72,19 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: `${src}/**/*.html`,
-        flatten: true,
-        to: destination,
-      },
-      {
-        from: `${src}/../appsscript.json`,
-        to: destination,
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: `${src}/**/*.html`,
+          flatten: true,
+          to: destination,
+        },
+        {
+          from: `${src}/../appsscript.json`,
+          to: destination,
+        },
+      ],
+    }),
     new GasPlugin({
       comments: false,
       source: 'digitalinspiration.com',
