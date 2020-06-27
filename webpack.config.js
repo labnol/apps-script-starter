@@ -83,6 +83,11 @@ module.exports = {
           from: `${src}/../appsscript.json`,
           to: destination,
         },
+        {
+          from: `${src}/../functions/*.js`,
+          to: destination,
+          flatten: true,
+        },
       ],
     }),
     new GasPlugin({

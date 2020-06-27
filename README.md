@@ -78,6 +78,10 @@ The default `.claspignore` file in the Apps Script Starter kit will push all the
 
 Create a new repository in Github and make a note of the URL of the new repository. Next, open the terminal and run the above commands to push your Apps Script project to Github.
 
+## Custom Google Sheet function
+
+Please read [the tutorial](./FUNCTIONS.md) on how to write custom functions for Google Sheets using Apps Script.
+
 ## :fire: Meet the Developer
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
