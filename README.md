@@ -26,6 +26,12 @@ cd my-project
 npm install
 ```
 
+Update: The `git clone` command adds a .git folder to your folder that pertains to the Apps Script Starter project and not your local project. You should either re-init the repository or use `degit` to clone the repository.
+
+```
+npx degit labnol/apps-script-starter my-project
+```
+
 **2.** Log in to Google clasp and authorize using your Google account.
 
 ```
