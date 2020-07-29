@@ -12,3 +12,7 @@ global.sendmail = (email = Session.getActiveUser().getEmail()) => {
   const textBody = htmlBody.replace(/<[^>]+>/g, ' ');
   GmailApp.sendEmail(email, 'Hello from Google Apps Script', textBody, { htmlBody });
 };
+
+global.onOpen = () => {
+  SpreadsheetApp.getUi().createMenu('Test').addItem('sendmail', 'sendmail').addToUi();
+};
