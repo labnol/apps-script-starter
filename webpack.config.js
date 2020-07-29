@@ -36,7 +36,9 @@ module.exports = {
         terserOptions: {
           ecma: 6,
           warnings: false,
-          mangle: {},
+          mangle: {
+            reserved: ['global']
+          },
           compress: {
             drop_console: false,
             drop_debugger: isProduction,
