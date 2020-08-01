@@ -75,18 +75,20 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: `${src}/**/*.html`,
+          from: path.posix.join(
+            path.resolve(__dirname,'src').replace(/\\/g, '/'),
+             '**/*.html'),
           flatten: true,
-          to: destination,
+          to: destination
         },
         {
           from: `${src}/../appsscript.json`,
-          to: destination,
+          to: destination
         },
         {
-          from: `${src}/../functions/*.js`,
+          from: path.posix.join(path.resolve(__dirname,'src').replace(/\\/g, '/'), '../functions/*.js'),
           to: destination,
-          flatten: true,
+          flatten: true
         },
       ],
     }),
