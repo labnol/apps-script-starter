@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "4.18.0",
+  "version": "4.19.0",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
     "name": "Amit Agarwal",
@@ -29,10 +29,10 @@
     "crypto-js": "3.1.9-1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@google/clasp": "^2.3.0",
     "@types/google-apps-script": "^1.0.14",
     "babel-eslint": "^10.1.0",
@@ -41,17 +41,17 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "cross-env": "^7.0.2",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-googleappsscript": "^1.0.3",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "gas-webpack-plugin": "^1.0.3",
+    "gas-webpack-plugin": "^1.0.4",
     "prettier": "^2.0.5",
-    "terser-webpack-plugin": "^3.0.7",
-    "webpack": "^4.44.0",
+    "terser-webpack-plugin": "^4.0.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
 }
