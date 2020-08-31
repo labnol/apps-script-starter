@@ -13,14 +13,18 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const src = path.resolve(__dirname, 'src');
 const destination = path.resolve(__dirname, 'dist');
 const isProduction = process.env.NODE_ENV === 'production';
+
+const getSrcPath = (filePath) => {
+  const src = path.resolve(__dirname, 'src');
+  return path.posix.join(src.replace(/\\/g, '/'), filePath);
+};
 
 module.exports = {
   mode: isProduction ? 'production' : 'none',
   context: __dirname,
-  entry: `${src}/index.js`,
+  entry: getSrcPath('/index.js'),
   output: {
     filename: `code.[contentHash].js`,
     path: destination,
@@ -75,20 +79,18 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.posix.join(
-            path.resolve(__dirname,'src').replace(/\\/g, '/'),
-             '**/*.html'),
+          from: getSrcPath('**/*.html'),
           flatten: true,
-          to: destination
-        },
-        {
-          from: `${src}/../appsscript.json`,
-          to: destination
-        },
-        {
-          from: path.posix.join(path.resolve(__dirname,'src').replace(/\\/g, '/'), '../functions/*.js'),
           to: destination,
-          flatten: true
+        },
+        {
+          from: getSrcPath('../appsscript.json'),
+          to: destination,
+        },
+        {
+          from: getSrcPath('../functions/*.js'),
+          to: destination,
+          flatten: true,
         },
       ],
     }),
