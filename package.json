@@ -49,8 +49,8 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "gas-webpack-plugin": "^1.2.0",
-    "prettier": "^2.1.1",
-    "terser-webpack-plugin": "^4.2.0",
+    "prettier": "^2.1.2",
+    "terser-webpack-plugin": "^4.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
