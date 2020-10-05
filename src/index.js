@@ -1,5 +1,6 @@
 import doGet from './server/webapp';
 import './es6';
+import './server/menu';
 
 global.doGet = doGet;
 
