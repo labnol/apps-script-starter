@@ -1,7 +1,7 @@
 {
   "name": "apps-script-starter",
   "version": "4.20.0",
-  "description": "Setup a local development environment for Google Apps Script",
+  "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "author": {
     "name": "Amit Agarwal",
     "email": "amit@labnol.org",
@@ -22,8 +22,7 @@
   },
   "keywords": [
     "google-apps-script",
-    "gsuite",
-    "apps-script"
+    "google-workspace"
   ],
   "dependencies": {
     "crypto-js": "3.1.9-1"
