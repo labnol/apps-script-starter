@@ -36,13 +36,13 @@
     "@google/clasp": "^2.3.0",
     "@types/google-apps-script": "^1.0.17",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.1",
     "babel-plugin-add-module-exports": "^1.0.4",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.2.1",
+    "copy-webpack-plugin": "^6.3.0",
     "cross-env": "^7.0.2",
-    "eslint": "^7.12.1",
-    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-googleappsscript": "^1.0.3",
@@ -52,6 +52,6 @@
     "prettier": "^2.1.2",
     "terser-webpack-plugin": "^5.0.3",
     "webpack": "^4.44.2",
-    "webpack-cli": "^4.1.0"
+    "webpack-cli": "^4.2.0"
   }
 }
