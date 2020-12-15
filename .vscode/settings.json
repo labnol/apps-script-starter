@@ -1,17 +1,8 @@
 {
-  "files.autoSave": "onFocusChange",
-  "git.enabled": true,
-  "prettier.singleQuote": true,
-  "editor.formatOnSave": true,
   "[javascript]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "eslint.enable": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-    "javascript"
-  ]
+  }
 }

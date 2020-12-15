@@ -1,5 +1,5 @@
-const name = 'Amit Agarwal';
+const userName = 'Amit Agarwal';
 
-Logger.log(`${name} has ${name.length} characters`);
-Logger.log(`${name} in uppercase is  ${name.toUpperCase()}`);
+Logger.log(`${userName} has ${userName.length} characters`);
+Logger.log(`${userName} in uppercase is  ${userName.toUpperCase()}`);
 Logger.log(`The date is ${new Date().toUTCString()}`);
