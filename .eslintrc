@@ -1,15 +1,11 @@
 {
   "root": true,
   "extends": ["labnol"],
-  "plugins": ["googleappsscript"],
-  "env": {
-    "googleappsscript/googleappsscript": true
-  },
   "rules": {
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 100,
+        "printWidth": 90,
         "singleQuote": true
       }
     ]
