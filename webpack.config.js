@@ -8,6 +8,7 @@
  */
 
 const path = require('path');
+const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
@@ -19,6 +20,22 @@ const isProduction = process.env.NODE_ENV === 'production';
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
   return path.posix.join(src.replace(/\\/g, '/'), filePath);
+};
+
+const getTargets = () => {
+  try {
+    const file = getSrcPath('../appsscript.json');
+    if (fs.existsSync(file)) {
+      const manifest = fs.readFileSync(file);
+      const data = JSON.parse(manifest);
+      if (data.runtimeVersion === 'V8') {
+        return { chrome: '55' };
+      }
+    }
+  } catch (f) {
+    //
+  }
+  return { ie: '11' };
 };
 
 module.exports = {
@@ -38,7 +55,6 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          ecma: 6,
           warnings: false,
           mangle: {},
           compress: {
@@ -70,6 +86,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', { targets: getTargets() }]],
+          },
         },
       },
     ],

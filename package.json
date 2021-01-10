@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "author": "Amit Agarwal <amit@labnol.org> (https://www.labnol.org)",
   "homepage": "https://digitalinspiration.com/",
@@ -20,38 +20,33 @@
     "google-apps-script",
     "google-workspace"
   ],
-  "dependencies": {
-    "crypto-js": "3.1.9-1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
-    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@google/clasp": "^2.3.0",
     "@types/google-apps-script": "^1.0.20",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
-    "babel-plugin-add-module-exports": "^1.0.4",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.4.0",
+    "copy-webpack-plugin": "^6.4.1",
     "cross-env": "^7.0.3",
-    "eslint": "^7.15.0",
+    "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-labnol": "^1.0.5",
-    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-labnol": "^1.0.9",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-googleappsscript": "^1.0.3",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gas-webpack-plugin": "^1.2.2",
     "prettier": "^2.2.1",
-    "terser-webpack-plugin": "^5.0.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.2.0"
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.45.0",
+    "webpack-cli": "^4.3.1"
   },
   "bugs": {
     "url": "https://github.com/labnol/apps-script-starter/issues"
