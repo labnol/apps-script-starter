@@ -13,6 +13,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const PureSpawn = require('./plugins/pure-spawn-webpack-plugin');
 
 const destination = path.resolve(__dirname, 'dist');
 const isProduction = process.env.NODE_ENV === 'production';
@@ -117,5 +118,6 @@ module.exports = {
       comments: false,
       source: 'digitalinspiration.com',
     }),
+    new PureSpawn({ command: './node_modules/.bin/clasp', args: ['push'] }),
   ],
 };

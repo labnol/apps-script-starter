@@ -7,6 +7,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
+    "dev": "webpack --watch",
     "build": "webpack",
     "upload": "clasp push",
     "deploy": "npm run build && npm run upload",

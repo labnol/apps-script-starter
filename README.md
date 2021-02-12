@@ -62,6 +62,16 @@ npm run deploy:prod
 
 ![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
+#### Watch mode
+
+It also supports constantly updated code without having to run `deploy` every time you update the code. Call
+
+```sh
+npm run dev
+```
+
+for always have the latest version of the code in the Cloud.
+
 #### Enable JavaScript v8 Runtim
 
 Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
