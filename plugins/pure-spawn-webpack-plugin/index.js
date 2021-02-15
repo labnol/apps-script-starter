@@ -45,8 +45,8 @@ module.exports = class ClassPlugin {
     });
 
     affectedlifecycleEvents.forEach((lifecycleEvent) => {
-      compiler.plugin(lifecycleEvent, () => {
-        if (plugin.spawn === undefined) {
+      compiler.plugin(lifecycleEvent, (compilation) => {
+        if (compilation.errors.length === 0 && plugin.spawn === undefined) {
           plugin.spawn = spawn(this.options.command, this.options.args, {
             stdio: 'inherit',
           });
