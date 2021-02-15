@@ -8,6 +8,8 @@
  * https://github.com/labnol/apps-script-starter
  */
 
+const fs = require('fs');
+const path = require('path');
 const { spawn } = require('child_process');
 
 const plugin = {
@@ -47,13 +49,24 @@ module.exports = class ClassPlugin {
     affectedlifecycleEvents.forEach((lifecycleEvent) => {
       compiler.plugin(lifecycleEvent, (compilation) => {
         if (compilation.errors.length === 0 && plugin.spawn === undefined) {
-          plugin.spawn = spawn(this.options.command, this.options.args, {
-            stdio: 'inherit',
-          });
-          plugin.spawn.on('close', () => {
-            plugin.call();
+          const { assets } = compilation;
+          const unlinked = [];
+          const compilationPath = path.resolve(compilation.options.output.path);
+          fs.readdir(compilationPath, (err, files) => {
+            files.forEach((file) => {
+              if (!assets[file])
+                fs.unlink(path.resolve(compilationPath, file), () => {
+                  unlinked.push(file);
+                  console.log(`Unlink: ${file}`);
+                });
+            });
+            plugin.spawn = spawn(this.options.command, this.options.args, {
+              stdio: 'inherit',
+            });
+            plugin.spawn.on('close', () => {});
           });
         }
+        if (compilation.errors) plugin.call();
       });
     });
   }
