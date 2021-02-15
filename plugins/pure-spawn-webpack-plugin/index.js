@@ -63,7 +63,9 @@ module.exports = class ClassPlugin {
             plugin.spawn = spawn(this.options.command, this.options.args, {
               stdio: 'inherit',
             });
-            plugin.spawn.on('close', () => {});
+            plugin.spawn.on('close', () => {
+              plugin.call();
+            });
           });
         }
         if (compilation.errors) plugin.call();
