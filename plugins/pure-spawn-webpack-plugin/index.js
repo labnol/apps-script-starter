@@ -11,6 +11,19 @@
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+const { resolve } = require('path');
+const { readdir } = require('fs').promises;
+
+async function getFiles(dir) {
+  const dirents = await readdir(dir, { withFileTypes: true });
+  const files = await Promise.all(
+    dirents.map((dirent) => {
+      const res = resolve(dir, dirent.name);
+      return dirent.isDirectory() ? getFiles(res) : res;
+    })
+  );
+  return Array.prototype.concat(...files);
+}
 
 const plugin = {
   lastCb: undefined,
@@ -52,9 +65,11 @@ module.exports = class ClassPlugin {
           const { assets } = compilation;
           const unlinked = [];
           const compilationPath = path.resolve(compilation.options.output.path);
-          fs.readdir(compilationPath, (err, files) => {
-            files.forEach((file) => {
-              if (!assets[file])
+
+          getFiles(compilationPath).then((data) => {
+            data.forEach((file) => {
+              const relative = path.relative(compilation.options.output.path, file);
+              if (!assets[relative])
                 fs.unlink(path.resolve(compilationPath, file), () => {
                   unlinked.push(file);
                   console.log(`Unlink: ${file}`);
@@ -64,6 +79,7 @@ module.exports = class ClassPlugin {
               stdio: 'inherit',
             });
             plugin.spawn.on('close', () => {
+              console.log('spawn end', plugin.lastCb);
               plugin.call();
             });
           });
