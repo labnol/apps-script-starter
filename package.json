@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "author": "Amit Agarwal <amit@labnol.org> (https://www.labnol.org)",
   "homepage": "https://digitalinspiration.com/",
@@ -23,19 +23,19 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
     "@google/clasp": "^2.3.0",
-    "@types/google-apps-script": "^1.0.20",
+    "@types/google-apps-script": "^1.0.24",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.4.1",
     "cross-env": "^7.0.3",
-    "eslint": "^7.17.0",
+    "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-labnol": "^1.0.9",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-labnol": "^1.0.10",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-googleappsscript": "^1.0.3",
     "eslint-plugin-html": "^6.1.1",
@@ -46,8 +46,8 @@
     "gas-webpack-plugin": "^1.2.2",
     "prettier": "^2.2.1",
     "terser-webpack-plugin": "^4.2.3",
-    "webpack": "^4.45.0",
-    "webpack-cli": "^4.3.1"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0"
   },
   "bugs": {
     "url": "https://github.com/labnol/apps-script-starter/issues"
