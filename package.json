@@ -10,7 +10,8 @@
     "build": "webpack",
     "upload": "clasp push",
     "deploy": "npm run build && npm run upload",
-    "deploy:prod": "cross-env NODE_ENV=production npm run deploy"
+    "deploy:prod": "cross-env NODE_ENV=production npm run deploy",
+    "test": "mocha --require esm --recursive"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,6 @@
     "google-apps-script",
     "google-workspace"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
@@ -42,7 +42,9 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "esm": "^3.2.25",
     "gas-webpack-plugin": "^1.2.2",
+    "mocha": "^8.3.0",
     "prettier": "^2.2.1",
     "terser-webpack-plugin": "^4.2.3",
     "webpack": "^4.46.0",
@@ -50,5 +52,8 @@
   },
   "bugs": {
     "url": "https://github.com/labnol/apps-script-starter/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }
