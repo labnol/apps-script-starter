@@ -64,6 +64,7 @@ module.exports = {
         {
           from: getSrcPath('**/*.html'),
           to: '[name].[ext]',
+          noErrorOnMissing: true,
         },
         {
           from: getSrcPath('../appsscript.json'),
@@ -72,6 +73,7 @@ module.exports = {
         {
           from: getSrcPath('../functions/*.js'),
           to: '[name].[ext]',
+          noErrorOnMissing: true,
         },
       ],
     }),
