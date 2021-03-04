@@ -62,7 +62,7 @@ npm run deploy:prod
 
 ![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
-#### Enable JavaScript v8 Runtim
+#### Enable JavaScript v8 Runtime
 
 Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
 
