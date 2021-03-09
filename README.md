@@ -46,19 +46,13 @@ npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 
 **4.** Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
 
-1. Deploy the project (development)
+**5.** Deploy the project
 
 ```
 npm run deploy
 ```
 
 The `dist` directory contains the bundled code that is pushed to Google Apps Script.
-
-**6.** Deploy the project (production mode)
-
-```
-npm run deploy:prod
-```
 
 ![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
@@ -67,10 +61,6 @@ npm run deploy:prod
 Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
 
 ![Google Apps Script - v8 Runtime](images/apps-script-v8.png)
-
-#### Development vs Production mode
-
-In production mode, the function names and variable names are shrinked and the output code is auto-minified. The production flag is not recommended for testing and debugging the Apps Script code.
 
 ### The .claspignore file
 
@@ -90,7 +80,7 @@ Please read [the tutorial](./FUNCTIONS.md) on how to write custom functions for 
 
 ## :fire: Meet the Developer
 
-<img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1144978512832368640/Ej7Zz7E9_400x400.jpg">
+<img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1320276905271070727/zQUrdqxO_200x200.jpg">
 
 [Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
 

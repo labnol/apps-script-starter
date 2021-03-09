@@ -32,6 +32,9 @@ module.exports = {
   optimization: {
     minimize: false,
   },
+  watchOptions: {
+    ignored: ['**/dist', '**/node_modules'],
+  },
   module: {
     rules: [
       {
