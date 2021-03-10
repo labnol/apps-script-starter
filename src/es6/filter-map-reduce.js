@@ -15,7 +15,10 @@ const bigNumbers = numbers.filter((number) => number > 10);
 Logger.log(bigNumbers);
 
 /* Add the numbers */
-const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const sum = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
 Logger.log(`The sum of ${numbers.join(', ')} is ${sum}`);
 
 /* Remove duplicates with reduce */

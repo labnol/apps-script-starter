@@ -8,66 +8,32 @@
  */
 
 const path = require('path');
-const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const PureSpawn = require('./plugins/pure-spawn-webpack-plugin');
-
-const destination = path.resolve(__dirname, 'dist');
-const isProduction = process.env.NODE_ENV === 'production';
 
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
   return path.posix.join(src.replace(/\\/g, '/'), filePath);
 };
 
-const getTargets = () => {
-  try {
-    const file = getSrcPath('../appsscript.json');
-    if (fs.existsSync(file)) {
-      const manifest = fs.readFileSync(file);
-      const data = JSON.parse(manifest);
-      if (data.runtimeVersion === 'V8') {
-        return { chrome: '55' };
-      }
-    }
-  } catch (f) {
-    //
-  }
-  return { ie: '11' };
-};
-
 module.exports = {
-  mode: isProduction ? 'production' : 'none',
+  mode: 'production',
   context: __dirname,
   entry: getSrcPath('/index.js'),
   output: {
-    filename: `code.[contentHash].js`,
-    path: destination,
+    filename: `[contenthash].js`,
+    path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'this',
   },
   resolve: {
     extensions: ['.js'],
   },
   optimization: {
-    minimize: isProduction,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          warnings: false,
-          mangle: {},
-          compress: {
-            drop_console: false,
-            drop_debugger: isProduction,
-          },
-          output: {
-            beautify: !isProduction,
-          },
-        },
-      }),
-    ],
+    minimize: false,
+  },
+  watchOptions: {
+    ignored: ['**/dist', '**/node_modules'],
   },
   module: {
     rules: [
@@ -88,7 +54,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env', { targets: getTargets() }]],
+            presets: [['@babel/preset-env', { targets: { chrome: '55' } }]],
           },
         },
       },
@@ -100,17 +66,17 @@ module.exports = {
       patterns: [
         {
           from: getSrcPath('**/*.html'),
-          flatten: true,
-          to: destination,
+          to: '[name].[ext]',
+          noErrorOnMissing: true,
         },
         {
           from: getSrcPath('../appsscript.json'),
-          to: destination,
+          to: '[name].[ext]',
         },
         {
           from: getSrcPath('../functions/*.js'),
-          to: destination,
-          flatten: true,
+          to: '[name].[ext]',
+          noErrorOnMissing: true,
         },
       ],
     }),
@@ -118,6 +84,5 @@ module.exports = {
       comments: false,
       source: 'digitalinspiration.com',
     }),
-    new PureSpawn({ command: './node_modules/.bin/clasp', args: ['push'] }),
   ],
 };
