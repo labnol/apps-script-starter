@@ -11,6 +11,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
+const SpawnPlugin = require('./plugins/pure-spawn-webpack-plugin');
 
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
@@ -83,6 +84,10 @@ module.exports = {
     new GasPlugin({
       comments: false,
       source: 'digitalinspiration.com',
+    }),
+    new SpawnPlugin({
+      command: 'clasp',
+      args: ['push'],
     }),
   ],
 };
