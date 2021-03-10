@@ -11,7 +11,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
-const SpawnPlugin = require('./plugins/pure-spawn-webpack-plugin');
 
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
@@ -67,16 +66,16 @@ module.exports = {
       patterns: [
         {
           from: getSrcPath('**/*.html'),
-          to: '[name].[ext]',
+          to: '[name][ext]',
           noErrorOnMissing: true,
         },
         {
           from: getSrcPath('../appsscript.json'),
-          to: '[name].[ext]',
+          to: '[name][ext]',
         },
         {
           from: getSrcPath('../functions/*.js'),
-          to: '[name].[ext]',
+          to: '[name][ext]',
           noErrorOnMissing: true,
         },
       ],
@@ -84,10 +83,6 @@ module.exports = {
     new GasPlugin({
       comments: false,
       source: 'digitalinspiration.com',
-    }),
-    new SpawnPlugin({
-      command: 'clasp',
-      args: ['push'],
     }),
   ],
 };
