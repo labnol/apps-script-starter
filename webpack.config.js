@@ -67,16 +67,16 @@ module.exports = {
       patterns: [
         {
           from: getSrcPath('**/*.html'),
-          to: '[name][ext]',
+          to: '[name].[ext]',
           noErrorOnMissing: true,
         },
         {
           from: getSrcPath('../appsscript.json'),
-          to: '[name][ext]',
+          to: '[name].[ext]',
         },
         {
           from: getSrcPath('../functions/*.js'),
-          to: '[name][ext]',
+          to: '[name].[ext]',
           noErrorOnMissing: true,
         },
       ],
