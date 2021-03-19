@@ -8,9 +8,9 @@
  */
 
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
@@ -24,7 +24,7 @@ module.exports = {
   output: {
     filename: `[contenthash].js`,
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'this',
+    clean: true,
   },
   resolve: {
     extensions: ['.js'],
@@ -38,17 +38,6 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          cache: true,
-          failOnError: false,
-          fix: true,
-        },
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -61,7 +50,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new ESLintPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {

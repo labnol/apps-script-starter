@@ -6,4 +6,4 @@ const doGet = () => {
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
 };
 
-export default doGet;
+global.doGet = doGet;
