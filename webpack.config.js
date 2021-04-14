@@ -43,7 +43,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env', { targets: { chrome: '55' } }]],
+            presets: [
+              ['@babel/preset-env', { targets: 'last 1 chrome version' }],
+            ],
+            plugins: [
+              [
+                '@babel/plugin-proposal-object-rest-spread',
+                { loose: true, useBuiltIns: true },
+              ],
+            ],
           },
         },
       },
