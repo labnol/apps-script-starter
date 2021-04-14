@@ -90,7 +90,7 @@ This has limitations:
 const hasCpuTime = () => !(Date.now() - START_TIME > ONE_MINUTE * 4);
 
 ```
-* You _can not_ test code that has no dependencies to Google App Script code, e.g.
+* You _can not_ test code that has dependencies to Google App Script code, e.g.
 ```
 function notTestable() {
     Logger.log("notTestable"); // <-- Google Apps Script function. Not callable in dev
