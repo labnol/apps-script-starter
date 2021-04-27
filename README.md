@@ -78,6 +78,28 @@ Create a new repository in Github and make a note of the URL of the new reposito
 
 Please read [the tutorial](./FUNCTIONS.md) on how to write custom functions for Google Sheets using Apps Script.
 
+## Testing your code
+You can run tests with jest using
+```
+npm run test
+```
+This has limitations:
+
+* You _can_ test code that has no dependencies to Google App Script code, e.g.
+```
+const hasCpuTime = () => !(Date.now() - START_TIME > ONE_MINUTE * 4);
+
+```
+* You _can not_ test code that has dependencies to Google App Script code, e.g.
+```
+function notTestable() {
+    Logger.log("notTestable"); // <-- Google Apps Script function. Not callable in dev
+    SpreadsheetApp.getUi(); // <-- Google Apps Script function. Not callable in dev
+    ...
+}
+```
+Check out [jest 'expects' here](https://jestjs.io/docs/expect)
+
 ## :fire: Meet the Developer
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1320276905271070727/zQUrdqxO_200x200.jpg">
