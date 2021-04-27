@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["labnol"],
+  "extends": ["labnol", "plugin:jest/recommended"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -12,7 +12,6 @@
   },
   "globals": {
     "OAuth1": true,
-    "OAuth2": true,
-    "FirebaseApp": true
+    "OAuth2": true
   }
 }
