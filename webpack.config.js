@@ -11,6 +11,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const GasPlugin = require('gas-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const webpack = require('webpack');
 
 const getSrcPath = (filePath) => {
   const src = path.resolve(__dirname, 'src');
@@ -32,6 +33,9 @@ module.exports = {
   optimization: {
     minimize: false,
   },
+  performance: {
+    hints: false,
+  },
   watchOptions: {
     ignored: ['**/dist', '**/node_modules'],
   },
@@ -43,9 +47,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ['@babel/preset-env', { targets: 'last 1 chrome version' }],
-            ],
+            presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
             plugins: [
               [
                 '@babel/plugin-proposal-object-rest-spread',
@@ -59,6 +61,7 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin(),
+    new webpack.ProgressPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -74,6 +77,10 @@ module.exports = {
           from: getSrcPath('../functions/*.js'),
           to: '[name][ext]',
           noErrorOnMissing: true,
+        },
+        {
+          from: getSrcPath('../node_modules/apps-script-oauth2/dist/OAuth2.gs'),
+          to: 'OAuth2.js',
         },
       ],
     }),
