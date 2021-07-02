@@ -27,7 +27,7 @@
     "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
     "@babel/preset-env": "^7.14.7",
-    "@google/clasp": "^2.3.2",
+    "@google/clasp": "^2.4.0",
     "@types/google-apps-script": "^1.0.34",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
