@@ -24,7 +24,7 @@ module.exports = {
   context: __dirname,
   entry: getSrcPath('/index.js'),
   output: {
-    filename: `[contenthash].js`,
+    filename: `code.js`,
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -56,7 +56,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+            cacheDirectory: true,
+            cacheCompression: false,
             plugins: [
               [
                 '@babel/plugin-proposal-object-rest-spread',
