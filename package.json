@@ -8,6 +8,8 @@
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack",
+    "format": "prettier --write dist/code.js",
+    "postbuild": "npm run format",
     "upload": "clasp push",
     "deploy": "npm run build && npm run upload",
     "test": "jest"

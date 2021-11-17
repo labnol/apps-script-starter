@@ -32,12 +32,17 @@ module.exports = {
     extensions: ['.js'],
   },
   optimization: {
-    minimize: false,
+    minimize: true,
     minimizer: [
       new TerserPlugin({
+        test: /\.js$/i,
+        extractComments: false,
         terserOptions: {
-          compress: false,
+          compress: true,
           mangle: true,
+          format: {
+            comments: /@customfunction/i,
+          },
         },
       }),
     ],
