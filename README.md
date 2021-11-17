@@ -6,7 +6,7 @@ The Google Apps Script Starker kit supports the new **V8 JavaScript runtime** th
 
 Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)** 👈 for quickly getting started with Apps Script development inside Visual Studio Code.
 
-You can build GSuite add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
+You can build Google Workspace add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
 
 The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://gsuite.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://gsuite.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://gsuite.google.com/marketplace/app/document_studio/429444628321).
 
@@ -74,23 +74,29 @@ The default `.claspignore` file in the Apps Script Starter kit will push all the
 
 Create a new repository in Github and make a note of the URL of the new repository. Next, open the terminal and run the above commands to push your Apps Script project to Github.
 
-## Custom Google Sheet function
+## Custom Google Sheet functions
 
 Please read [the tutorial](./FUNCTIONS.md) on how to write custom functions for Google Sheets using Apps Script.
 
-## Testing your code
+## Testing your Google Apps Script code
+
 You can run tests with jest using
+
 ```
 npm run test
 ```
+
 This has limitations:
 
-* You _can_ test code that has no dependencies to Google App Script code, e.g.
+- You _can_ test code that has no dependencies to Google App Script code, e.g.
+
 ```
 const hasCpuTime = () => !(Date.now() - START_TIME > ONE_MINUTE * 4);
 
 ```
-* You _can not_ test code that has dependencies to Google App Script code, e.g.
+
+- You _can not_ test code that has dependencies to Google App Script code, e.g.
+
 ```
 function notTestable() {
     Logger.log("notTestable"); // <-- Google Apps Script function. Not callable in dev
@@ -98,13 +104,14 @@ function notTestable() {
     ...
 }
 ```
+
 Check out [jest 'expects' here](https://jestjs.io/docs/expect)
 
 ## :fire: Meet the Developer
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1320276905271070727/zQUrdqxO_200x200.jpg">
 
-[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (GSuite, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
+[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (Google Workspace, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
 
 He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
 
