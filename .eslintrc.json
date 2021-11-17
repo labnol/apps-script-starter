@@ -22,10 +22,14 @@
     "browser": true,
     "es6": true,
     "node": true,
+    "jest": true,
     "googleappsscript/googleappsscript": true
   },
   "ignorePatterns": ["node_modules/"],
-
+  "globals": {
+    "OAuth1": true,
+    "OAuth2": true
+  },
   "rules": {
     "prettier/prettier": [
       "error",
@@ -35,6 +39,7 @@
       }
     ],
     "no-await-in-loop": "off",
+    "import/prefer-default-export": "off",
     "no-unused-vars": [
       1,
       {
@@ -43,9 +48,5 @@
         "caughtErrors": "none"
       }
     ]
-  },
-  "globals": {
-    "OAuth1": true,
-    "OAuth2": true
   }
 }

@@ -17,6 +17,6 @@ global.onOpen = () => {
       .addItem('Credits', 'showCredits')
       .addToUi();
   } catch (f) {
-    console.error(f);
+    Logger.log(f.message);
   }
 };
