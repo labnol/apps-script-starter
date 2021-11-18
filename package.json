@@ -36,7 +36,7 @@
     "@types/google.picker": "^0.0.39",
     "@types/jest": "^27.0.2",
     "babel-loader": "^8.2.3",
-    "copy-webpack-plugin": "^9.1.0",
+    "copy-webpack-plugin": "^10.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",

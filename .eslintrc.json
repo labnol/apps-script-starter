@@ -33,8 +33,10 @@
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 80,
-        "singleQuote": true
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 120,
+        "endOfLine": "auto"
       }
     ],
     "no-await-in-loop": "off",
