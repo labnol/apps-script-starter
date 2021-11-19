@@ -1,6 +1,6 @@
 {
   "name": "apps-script-starter",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "author": "Amit Agarwal <amit@labnol.org> (https://www.labnol.org)",
   "homepage": "https://digitalinspiration.com/",
@@ -34,7 +34,7 @@
     "@types/google-apps-script": "^1.0.41",
     "@types/google-apps-script-oauth2": "^38.0.0",
     "@types/google.picker": "^0.0.39",
-    "@types/jest": "^27.0.2",
+    "@types/jest": "^27.0.3",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.0.0",
     "cross-env": "^7.0.3",

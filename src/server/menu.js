@@ -3,9 +3,7 @@ global.showHelp = () => {
 };
 
 global.showCredits = () => {
-  SpreadsheetApp.getActiveSpreadsheet().toast(
-    'Developed by Amit Agarwal @labnol'
-  );
+  SpreadsheetApp.getActiveSpreadsheet().toast('Developed by Amit Agarwal @labnol');
 };
 
 global.onOpen = () => {

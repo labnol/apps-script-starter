@@ -63,12 +63,7 @@ module.exports = {
           options: {
             cacheDirectory: true,
             cacheCompression: false,
-            plugins: [
-              [
-                '@babel/plugin-proposal-object-rest-spread',
-                { loose: true, useBuiltIns: true },
-              ],
-            ],
+            plugins: [['@babel/plugin-proposal-object-rest-spread', { loose: true, useBuiltIns: true }]],
           },
         },
       },
@@ -92,6 +87,7 @@ module.exports = {
           from: getSrcPath('../functions/*.js'),
           to: '[name][ext]',
           noErrorOnMissing: true,
+          info: { minimized: true },
         },
         {
           from: getSrcPath('../node_modules/apps-script-oauth2/dist/OAuth2.gs'),

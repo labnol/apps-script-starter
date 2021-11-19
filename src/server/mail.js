@@ -1,8 +1,7 @@
 global.sendmail = () => {
   const email = Session.getActiveUser().getEmail();
 
-  const TUTORIAL =
-    'https://www.labnol.org/internet/google-apps-script-developers/32305/';
+  const TUTORIAL = 'https://www.labnol.org/internet/google-apps-script-developers/32305/';
 
   const htmlBody = `
     <p>This email was sent using the <a href="${TUTORIAL}">Google Apps Script Starter kit</a>.</p>
