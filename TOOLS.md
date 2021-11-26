@@ -1,6 +1,10 @@
 ## :star2: Tools
 
-The Google Apps Script Starker kit uses these tools under the hood.
+The Google Apps Script Starter kit uses these tools under the hood.
+
+#### VSCode Extension
+
+All the required extensions are available through the [Google Apps Script Extensions Pack](https://marketplace.visualstudio.com/items?itemName=labnol.google-apps-script) for VSCode.
 
 #### Babel
 

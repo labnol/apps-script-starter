@@ -38,8 +38,12 @@ module.exports = {
         test: /\.js$/i,
         extractComments: false,
         terserOptions: {
+          ecma: 2020,
           compress: true,
-          mangle: true,
+          mangle: {
+            reserved: ['global'],
+            keep_fnames: true, // Easier debugging in the browser
+          },
           format: {
             comments: /@customfunction/i,
           },
