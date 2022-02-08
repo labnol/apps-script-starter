@@ -1,10 +1,10 @@
 # Google Apps Script
 
-Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)** 👈 for quickly getting started with Apps Script development inside Visual Studio Code. It is recommended that you install the [Extension Pack](https://marketplace.visualstudio.com/items?itemName=labnol.google-apps-script) for working with Apps Script files in VS Code.
+Please follow the 👉 **[step-by-step video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)** 👈 to get started with Apps Script development inside Visual Studio Code. It is recommended that you install the [Extension Pack](https://marketplace.visualstudio.com/items?itemName=labnol.google-apps-script) for working with Apps Script files in VS Code.
 
 You can build Google Workspace add-ons (for Google Docs, Slides, Gmail and Google Sheets), web applications and workflow automation routines with next-generation JavaScript.
 
-The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://workspace.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://workspace.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://workspace.google.com/marketplace/app/document_studio/429444628321).
+This kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://workspace.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://workspace.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://workspace.google.com/marketplace/app/document_studio/429444628321).
 
 ![Google Apps Script Development with ES6](../images/google-apps-script-development.png)
 
@@ -12,33 +12,33 @@ The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/
 
 Setting up a modern development environment for building [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**).
 
-You also need to install Node.js which includes the npm package manager.
+You do need to install `node.js` (version 16 or later) which includes the npm package manager.
 
-### :package: Getting Started
+### 📦 Getting Started
 
 **1.** Clone the repository and install npm dependencies and [utilities](../TOOLS.md).
 
-```
-git clone https://github.com/labnol/apps-script-starter my-project
-cd my-project
+```bash
+git clone --depth=1 https://github.com/labnol/apps-script-starter gas-project
+cd gas-project
 npm install
 ```
 
 Update: The `git clone` command adds a .git folder to your folder that pertains to the Apps Script Starter project and not your local project. You should either re-init the repository or use `degit` to clone the repository.
 
-```
+```bash
 npx degit labnol/apps-script-starter my-project
 ```
 
 **2.** Log in to Google clasp and authorize using your Google account.
 
-```
+```bash
 npx clasp login
 ```
 
 **3.** Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
 
-```
+```bash
 npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 ```
 
@@ -46,7 +46,7 @@ npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
 
 **5.** Deploy the project
 
-```
+```bash
 npm run deploy
 ```
 
@@ -80,7 +80,7 @@ Please read [the tutorial](../FUNCTIONS.md) on how to write custom functions for
 
 You can run tests with jest using
 
-```
+```bash
 npm run test
 ```
 
@@ -88,14 +88,13 @@ This has limitations:
 
 - You _can_ test code that has no dependencies to Google App Script code, e.g.
 
-```
+```js
 const hasCpuTime = () => !(Date.now() - START_TIME > ONE_MINUTE * 4);
-
 ```
 
 - You _can not_ test code that has dependencies to Google App Script code, e.g.
 
-```
+```js
 function notTestable() {
     Logger.log("notTestable"); // <-- Google Apps Script function. Not callable in dev
     SpreadsheetApp.getUi(); // <-- Google Apps Script function. Not callable in dev
@@ -111,7 +110,7 @@ Check out [jest 'expects' here](https://jestjs.io/docs/expect)
 
 [Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (Google Workspace, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
 
-He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
+He frequently uses [Google Apps Script](https://www.labnol.org/topic/google-apps-script) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
 
 ### :cherry_blossom: Contribution
 
