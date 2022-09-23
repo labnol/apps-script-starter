@@ -111,9 +111,9 @@ Check out [jest 'expects' here](https://jestjs.io/docs/expect)
 
 <img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1320276905271070727/zQUrdqxO_200x200.jpg">
 
-[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (Google Workspace, Google Apps Script) and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
+[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (Google Workspace, Google Apps Script), Google Cloud Innovator, and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
 
-He frequently uses [Google Apps Script](https://ctrlq.org/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
+He frequently uses [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
 
 ### :cherry_blossom: Contribution
 
