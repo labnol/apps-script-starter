@@ -11,9 +11,7 @@ const expBackoff = (func) => {
       if (n === MAX_RETRIES) {
         throw e;
       }
-      Utilities.sleep(
-        2 ** n * ONE_SECOND + Math.round(Math.random() * ONE_SECOND)
-      );
+      Utilities.sleep(2 ** n * ONE_SECOND + Math.round(Math.random() * ONE_SECOND));
     }
   }
   return null;

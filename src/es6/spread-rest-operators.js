@@ -26,14 +26,7 @@ const emailUpdated = {
 };
 Logger.log(emailUpdated);
 
-const stack = [
-  'Google Apps Script',
-  'JavaScript',
-  'Firebase',
-  'Node.js',
-  'Webpack',
-  'Babel',
-];
+const stack = ['Google Apps Script', 'JavaScript', 'Firebase', 'Node.js', 'Webpack', 'Babel'];
 
 const [gas, js, ...others] = stack;
 

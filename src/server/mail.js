@@ -1,4 +1,4 @@
-global.sendmail = () => {
+export const sendmail = () => {
   const email = Session.getActiveUser().getEmail();
 
   const TUTORIAL = 'https://www.labnol.org/internet/google-apps-script-developers/32305/';
