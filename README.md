@@ -64,7 +64,7 @@ Inside the Google Apps Script editor, select View > Show project manifest to ope
 
 ### The .claspignore file
 
-The `.claspignore` file allows you to specify file and directories that you do not wish to not upload to your Google Apps Script project via `clasp push`.
+The `.claspignore` file allows you to specify file and directories that you do not wish to upload to your Google Apps Script project via `clasp push`.
 
 The default `.claspignore` file in the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
 
