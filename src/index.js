@@ -1,11 +1,5 @@
-/* Written by Amit Agarwal */
+import { getGmailAliases } from './server/gmail.js';
+import { makeQueryString } from './server/http.js';
+import { doGet } from './server/webapp.js';
 
-import { getGmailAliases, getGmailLabels } from './gmail';
-import { sendmail } from './server/mail';
-import { doGet } from './server/webapp';
-
-global.sendmail = sendmail;
-global.doGet = doGet;
-
-global.getGmailLabels = getGmailLabels;
-global.getGmailAliases = getGmailAliases;
+export { doGet, getGmailAliases, makeQueryString };

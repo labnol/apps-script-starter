@@ -1,17 +1,11 @@
-export const makeQueryString = (url, params = {}) => {
-  const paramString = Object.keys(params)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
-    .join('&');
-  return url + (url.indexOf('?') >= 0 ? '&' : '?') + paramString;
+import queryString from 'query-string';
+
+export const makeQueryString = () => {
+  const baseUrl = "https://example.com"
+  const data = { name: "amit", location: "india",  interests: ["workspace", "apps script"] };
+  const params = queryString.stringify(data, { sort: false, arrayFormat: 'bracket' });
+  const url = `${baseUrl}?${params}`;
+  Logger.log(`URL: ${url}`);
 };
 
-export const makeHttpGetRequest = (apiUrl, params, accessToken) => {
-  const url = makeQueryString(apiUrl, params);
-  const response = UrlFetchApp.fetch(url, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-    muteHttpExceptions: true,
-  });
-  return JSON.parse(response);
-};
+

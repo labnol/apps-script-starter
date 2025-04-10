@@ -6,13 +6,9 @@ The Google Apps Script Starter kit uses these tools under the hood.
 
 All the required extensions are available through the [Google Apps Script Extensions Pack](https://marketplace.visualstudio.com/items?itemName=labnol.google-apps-script) for VSCode.
 
-#### Babel
+#### Vite
 
-Write code using ES6 features like arrow functions, destructuring, classes, template literals, and the Babel transpiler will transform your ECMAScript 2015/2017 code to ES5 that Apps Script can understand.
-
-#### Webpack
-
-Webpack is a powerful tool for bundling JavaScript modules. Developers can structure code in directory and Webpack creates a minimized and optimized bundle for pushing to production.
+Vite is a build tool that is fast, lightweight and has a simple configuration. Vite is used to bundle the code and deploy it to Google Apps Script.
 
 #### ESLint
 
