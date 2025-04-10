@@ -56,12 +56,6 @@ The `dist` directory contains the bundled code that is pushed to Google Apps Scr
 
 ![Google Apps Script - Setup Development Environment](images/npm-install.gif)
 
-#### Enable JavaScript v8 Runtime
-
-Inside the Google Apps Script editor, select View > Show project manifest to open the `appsscript.json` manifest file in the editor. Add a new `runtimeVersion` field and set the value to `V8`. Save your script.
-
-![Google Apps Script - v8 Runtime](images/apps-script-v8.png)
-
 ### The .claspignore file
 
 The `.claspignore` file allows you to specify file and directories that you do not wish to upload to your Google Apps Script project via `clasp push`.
