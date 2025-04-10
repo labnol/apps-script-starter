@@ -19,15 +19,9 @@ You also need to install Node.js which includes the npm package manager.
 **1.** Clone the repository and install npm dependencies and [utilities](TOOLS.md).
 
 ```
-git clone https://github.com/labnol/apps-script-starter my-project
+npx degit labnol/apps-script-starter my-project
 cd my-project
 npm install
-```
-
-Update: The `git clone` command adds a .git folder to your folder that pertains to the Apps Script Starter project and not your local project. You should either re-init the repository or use `degit` to clone the repository.
-
-```
-npx degit labnol/apps-script-starter my-project
 ```
 
 **2.** Log in to Google clasp and authorize using your Google account.

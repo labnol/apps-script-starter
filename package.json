@@ -11,12 +11,7 @@
     "build": "vite build --config vite.config.js",
     "postbuild": "npx prettier --write dist/**/*.js",
     "upload": "npx clasp push",
-    "deploy": "npm run build && npm run upload",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/labnol/apps-script-starter.git"
+    "deploy": "npm run build && npm run upload"
   },
   "keywords": [
     "google-apps-script",
@@ -28,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
+    "@google/clasp": "^3.0.3-alpha",
     "@types/google-apps-script": "^1.0.97",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-googleappsscript": "^1.0.5",

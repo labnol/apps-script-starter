@@ -22,18 +22,10 @@ const viteGoogleAppsScript = () => ({
 });
 
 const targets = [
-  {
-    src: 'src/html/*.html',
-    dest: '.',
-  },
-  {
-    src: 'functions/**/*.js',
-    dest: '.',
-  },
-  {
-    src: 'appsscript.json',
-    dest: '.',
-  },
+  { src: 'node_modules/apps-script-oauth2/dist/OAuth2.gs', dest: 'oauth2.js' },
+  { src: 'src/html/*.html', dest: '.' },
+  { src: 'functions/**/*.js', dest: '.' },
+  { src: 'appsscript.json', dest: '.' },
 ];
 
 export default defineConfig(({ mode }) => ({
