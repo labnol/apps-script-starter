@@ -19,23 +19,20 @@
   ],
   "dependencies": {
     "apps-script-oauth2": "github:googleworkspace/apps-script-oauth2",
-    "query-string": "^9.1.1"
+    "query-string": "^9.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.24.0",
-    "@google/clasp": "^3.0.3-alpha",
-    "@types/google-apps-script": "^1.0.97",
-    "eslint-config-prettier": "^10.1.1",
+    "@eslint/js": "^9.29.0",
+    "@google/clasp": "^3.0.6-alpha",
+    "@types/google-apps-script": "^1.0.99",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-googleappsscript": "^1.0.5",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^16.0.0",
+    "globals": "^16.2.0",
     "prettier": "^3.5.3",
-    "vite": "^6.2.6",
-    "vite-plugin-static-copy": "^2.3.1"
-  },
-  "bugs": {
-    "url": "https://github.com/labnol/apps-script-starter/issues"
+    "vite": "^6.3.5",
+    "vite-plugin-static-copy": "^3.0.0"
   }
 }
