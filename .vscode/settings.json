@@ -6,10 +6,6 @@
     "source.fixAll.eslint": "explicit"
   },
   "workbench.colorCustomizations": {
-    "xterminal.background": "#282936",
-    "xterminal.foreground": "#E9E9F4",
-    "terminalCursor.background": "#E9E9F4",
-    "terminalCursor.foreground": "#E9E9F4",
     "terminal.ansiBlack": "#282936",
     "terminal.ansiBlue": "#62D6E8",
     "terminal.ansiBrightBlack": "#626483",
@@ -27,6 +23,10 @@
     "terminal.ansiWhite": "#E9E9F4",
     "terminal.ansiYellow": "#00F769",
     "terminal.background": "#282936",
-    "terminal.foreground": "#E9E9F4"
+    "terminal.foreground": "#E9E9F4",
+    "terminalCursor.background": "#E9E9F4",
+    "terminalCursor.foreground": "#E9E9F4",
+    "xterminal.background": "#282936",
+    "xterminal.foreground": "#E9E9F4"
   }
 }

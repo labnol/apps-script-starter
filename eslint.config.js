@@ -2,6 +2,7 @@ import eslintPlugin from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import googleappsscript from 'eslint-plugin-googleappsscript';
 import importPlugin from 'eslint-plugin-import';
+import jsoncPlugin from 'eslint-plugin-jsonc';
 import prettierPlugin from 'eslint-plugin-prettier';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
@@ -11,7 +12,7 @@ export default [
   eslintPlugin.configs.recommended,
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
-  { ignores: ['dist/**', 'build/**', 'node_modules/**'] },
+  { ignores: ['dist/**', 'build/**', 'node_modules/**', 'package-lock.json'] },
   {
     files: ['**/*.js'],
     ignores: ['node_modules/**', 'dist/**', 'build/**'],
@@ -42,14 +43,8 @@ export default [
       'import/prefer-default-export': 'off',
       'import/no-extraneous-dependencies': 'warn',
       'import/extensions': ['error', 'ignorePackages'],
-      'import/order': [
-        'error',
-        {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          'newlines-between': 'always',
-          alphabetize: { order: 'asc' },
-        },
-      ],
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
       'no-unused-vars': [
         'warn',
         {
@@ -58,17 +53,21 @@ export default [
           caughtErrors: 'none',
         },
       ],
-      'prettier/prettier': [
-        'error',
-        {
-          trailingComma: 'es5',
-          singleQuote: true,
-          printWidth: 120,
-          endOfLine: 'auto',
-          semi: true,
-          tabWidth: 2,
-        },
-      ],
+      'prettier/prettier': 'error',
+    },
+  },
+  ...jsoncPlugin.configs['flat/recommended-with-jsonc'],
+  {
+    rules: {
+      'jsonc/sort-keys': 'error',
+    },
+  },
+  {
+    files: ['**/*.test.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
     },
   },
 ];

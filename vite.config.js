@@ -1,5 +1,4 @@
 import { resolve } from 'path';
-
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
@@ -22,7 +21,11 @@ const viteGoogleAppsScript = () => ({
 });
 
 const targets = [
-  { src: 'node_modules/apps-script-oauth2/dist/OAuth2.gs', dest: '.', rename: (fileName) => `${fileName.toLowerCase()}.js` },
+  {
+    src: 'node_modules/apps-script-oauth2/dist/OAuth2.gs',
+    dest: '.',
+    rename: (fileName) => `${fileName.toLowerCase()}.js`,
+  },
   { src: 'src/html/*.html', dest: '.' },
   { src: 'functions/**/*.js', dest: '.' },
   { src: 'appsscript.json', dest: '.' },
