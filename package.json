@@ -1,38 +1,43 @@
 {
-  "name": "apps-script-starter",
-  "version": "14.0.0",
-  "type": "module",
-  "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "author": "Amit Agarwal <amit@labnol.org> (https://www.labnol.org)",
-  "homepage": "https://digitalinspiration.com/",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite build --config vite.config.js --mode development --watch",
-    "build": "vite build --config vite.config.js",
-    "postbuild": "npx prettier --write dist/**/*.js",
-    "upload": "npx clasp push",
-    "deploy": "npm run build && npm run upload"
+  "dependencies": {
+    "apps-script-oauth2": "github:googleworkspace/apps-script-oauth2"
   },
+  "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@google/clasp": "^2.5.0",
+    "@types/google-apps-script": "^1.0.99",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-googleappsscript": "^1.0.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.3.0",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "query-string": "^9.2.2",
+    "vite": "^7.1.0",
+    "vite-plugin-static-copy": "^3.1.1"
+  },
+  "homepage": "https://digitalinspiration.com/",
   "keywords": [
     "google-apps-script",
     "google-workspace"
   ],
-  "dependencies": {
-    "apps-script-oauth2": "github:googleworkspace/apps-script-oauth2",
-    "query-string": "^9.2.0"
+  "license": "MIT",
+  "name": "apps-script-starter",
+  "scripts": {
+    "build": "vite build --config vite.config.js",
+    "deploy": "npm run build && npm run upload",
+    "dev": "vite build --config vite.config.js --mode development --watch",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "postbuild": "npx prettier --write dist/**/*.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "upload": "npx clasp push"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.29.0",
-    "@google/clasp": "^3.0.6-alpha",
-    "@types/google-apps-script": "^1.0.99",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-googleappsscript": "^1.0.5",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.4.1",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^16.2.0",
-    "prettier": "^3.5.3",
-    "vite": "^6.3.5",
-    "vite-plugin-static-copy": "^3.0.0"
-  }
+  "type": "module",
+  "version": "14.0.0"
 }

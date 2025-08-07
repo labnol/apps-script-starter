@@ -1,1 +1,1 @@
-{ "scriptId": "<DEV_PROJECT_ID>", "rootDir": "dist/gas" }
+{ "rootDir": "dist/gas", "scriptId": "<DEV_PROJECT_ID>" }
