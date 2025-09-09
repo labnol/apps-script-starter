@@ -34,6 +34,7 @@ const targets = [
 export default defineConfig(({ mode }) => ({
   plugins: [viteGoogleAppsScript(), viteStaticCopy({ targets })],
   build: {
+    target: "es2020",
     minify: mode !== 'development',
     outDir: resolve(process.cwd(), 'dist'),
     lib: {
