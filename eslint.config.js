@@ -1,5 +1,4 @@
 import eslintPlugin from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
 import googleappsscript from 'eslint-plugin-googleappsscript';
 import importPlugin from 'eslint-plugin-import';
 import jsoncPlugin from 'eslint-plugin-jsonc';
@@ -10,12 +9,10 @@ import globals from 'globals';
 
 export default [
   eslintPlugin.configs.recommended,
-  eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   { ignores: ['dist/**', 'build/**', 'node_modules/**', 'package-lock.json'] },
   {
     files: ['**/*.js'],
-    ignores: ['node_modules/**', 'dist/**', 'build/**'],
     plugins: {
       prettier: prettierPlugin,
       import: importPlugin,
@@ -53,7 +50,6 @@ export default [
           caughtErrors: 'none',
         },
       ],
-      'prettier/prettier': 'error',
     },
   },
   ...jsoncPlugin.configs['flat/recommended-with-jsonc'],
