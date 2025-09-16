@@ -1,13 +1,14 @@
 {
   "author": "Amit Agarwal <amit@labnol.org> (https://www.labnol.org)",
   "dependencies": {
-    "apps-script-oauth2": "github:googleworkspace/apps-script-oauth2"
+    "apps-script-oauth2": "github:googleworkspace/apps-script-oauth2",
+    "eslint-config-prettier": "^10.1.8"
   },
   "description": "Setup a local development environment for Google Apps Script with Visual Studio Code",
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@google/clasp": "^3.0.6-alpha",
-    "@types/google-apps-script": "^2.0.1",
+    "@types/google-apps-script": "^2.0.2",
     "eslint-plugin-googleappsscript": "^1.0.5",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsonc": "^2.20.1",
@@ -38,5 +39,5 @@
     "upload": "npx clasp push"
   },
   "type": "module",
-  "version": "14.2.0"
+  "version": "14.2.1"
 }
