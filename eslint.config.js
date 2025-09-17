@@ -17,7 +17,7 @@ export default [
       prettier: prettierPlugin,
       import: importPlugin,
       'simple-import-sort': pluginSimpleImportSort,
-      googleappsscript: googleappsscript,
+      googleappsscript,
     },
     languageOptions: {
       ecmaVersion: 'latest',
@@ -35,13 +35,6 @@ export default [
       'no-continue': 'off',
       'no-console': 'warn',
       'no-underscore-dangle': 'off',
-      'prefer-template': 'error',
-      camelcase: 'off',
-      'import/prefer-default-export': 'off',
-      'import/no-extraneous-dependencies': 'warn',
-      'import/extensions': ['error', 'ignorePackages'],
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
       'no-unused-vars': [
         'warn',
         {
@@ -50,19 +43,105 @@ export default [
           caughtErrors: 'none',
         },
       ],
+      'no-unused-expressions': 'warn',
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'prefer-template': 'error',
+      'prefer-arrow-callback': 'error',
+      'arrow-spacing': 'error',
+      'no-duplicate-imports': 'error',
+      'no-useless-rename': 'error',
+      'object-shorthand': 'error',
+      'prefer-destructuring': [
+        'error',
+        {
+          array: true,
+          object: true,
+        },
+        {
+          enforceForRenamedProperties: false,
+        },
+      ],
+
+      // Naming conventions
+      camelcase: 'off',
+
+      // Import/export rules
+      'import/prefer-default-export': 'off',
+      'import/no-extraneous-dependencies': 'warn',
+      'import/extensions': ['error', 'ignorePackages'],
+      'import/no-unresolved': 'off', // Disabled for Apps Script compatibility
+      'import/no-cycle': 'warn',
+      'import/no-self-import': 'error',
+      'import/no-useless-path-segments': 'error',
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'prettier/prettier': [
+        'error',
+        {
+          trailingComma: 'es5',
+          singleQuote: true,
+          printWidth: 120,
+          endOfLine: 'auto',
+          semi: true,
+          tabWidth: 2,
+        },
+      ],
     },
   },
+
   ...jsoncPlugin.configs['flat/recommended-with-jsonc'],
   {
+    files: ['**/*.json', '**/*.jsonc'],
     rules: {
       'jsonc/sort-keys': 'error',
+      'jsonc/no-dupe-keys': 'error',
+      'jsonc/no-comments': 'off', // Allow comments in JSON files
     },
   },
+
   {
-    files: ['**/*.test.js'],
+    files: ['**/*.test.js', '**/*.spec.js', '**/__tests__/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.jest,
+        ...globals.jasmine,
+      },
+    },
+    rules: {
+      'no-console': 'off', // Allow console in tests
+      'import/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: true,
+          optionalDependencies: false,
+          peerDependencies: false,
+        },
+      ],
+    },
+  },
+
+  {
+    files: ['*.config.js', 'vite.config.js', 'eslint.config.js', 'jest.config.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+    rules: {
+      'import/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: true,
+        },
+      ],
+    },
+  },
+  {
+    files: ['**/*.html'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
       },
     },
   },

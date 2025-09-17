@@ -1,4 +1,5 @@
 import queryString from 'query-string';
+
 import { createQueryString } from './http.js';
 
 describe('createQueryString', () => {
