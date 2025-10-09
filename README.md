@@ -1,4 +1,12 @@
-# Google Apps Script Development 💯
+# Google Apps Script Starter Kit
+
+[![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-V8-blue)](https://developers.google.com/apps-script)
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/labnol/apps-script-starter/pulls)
+
+**A modern development environment for building Google Apps Script projects with modern web development tools.**
+
+This starter kit provides a boilerplate for developing Google Apps Script projects using modern JavaScript (ES6+) and a local development environment. It includes a curated selection of tools to enhance your development workflow, including code bundling, linting, testing, and deployment.
 
 ![Google Apps Script Development with ES6](images/google-apps-script-development.png)
 
@@ -8,103 +16,138 @@ You can build Google Workspace add-ons (for Google Docs, Slides, Gmail and Googl
 
 The starter kit is used by [Digital Inspiration](https://digitalinspiration.com/) for building popular Google add-ons including [Gmail Mail Merge](https://workspace.google.com/marketplace/app/mail_merge_with_attachments/223404411203), [Google Forms Notifications](https://workspace.google.com/marketplace/app/email_notifications_for_google_forms/984866591130) and [Document Studio](https://workspace.google.com/marketplace/app/document_studio/429444628321).
 
-## Build with Google Apps Script 🚀
+## What's Included
 
-Setting up a modern development environment for building [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) projects is easy and quick (**[video tutorial](https://www.youtube.com/watch?v=KxdCIbeO4Uk)**).
+This starter kit comes with a pre-configured set of tools to help you write high-quality Google Apps Script code:
 
-You also need to install Node.js which includes the npm package manager.
+- **[Vite](https://vitejs.dev/):** A next-generation build tool that provides a fast and lean development experience.
+- **[Jest](https://jestjs.io/):** A delightful JavaScript testing framework with a focus on simplicity.
+- **[ESLint](https://eslint.org/):** A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript.
+- **[Prettier](https://prettier.io/):** An opinionated code formatter that enforces a consistent style.
+- **[clasp](https://github.com/google/clasp):** The official command-line tool for managing Google Apps Script projects.
 
-### :package: Getting Started
+## Getting Started
 
-**1.** Clone the repository and install npm dependencies and [utilities](TOOLS.md).
+Follow these steps to get your development environment set up and running.
 
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (which includes npm)
+- A Google account
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    npx degit labnol/apps-script-starter my-project
+    cd my-project
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Log in to clasp:**
+
+    Authorize `clasp` to manage your Google Apps Script projects using your Google account.
+
+    ```bash
+    npx clasp login
+    ```
+
+4.  **Create a new Google Apps Script project:**
+
+    Create a new script project bound to a Google Sheet or as a standalone script.
+
+    ```bash
+    npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
+    ```
+
+    This will create a new Google Sheet and a bound script project in your Google Drive.
+
+## Development
+
+This starter kit provides a streamlined development workflow to help you build your Google Apps Script projects efficiently.
+
+### Development Server
+
+To start the development server, run the following command:
+
+```bash
+npm run dev
 ```
-npx degit labnol/apps-script-starter my-project
-cd my-project
-npm install
-```
 
-**2.** Log in to Google clasp and authorize using your Google account.
+This command will watch for changes in your source files and automatically rebuild the project.
 
-```
-npx clasp login
-```
+### Code Structure
 
-**3.** Create a new Google Script bound to a Google Sheet (or set the type as standalone to create a standalone script in your Google Drive)
+The main source code for your application is located in the `src` directory.
 
-```
-npx clasp create --type sheets --title "My Apps Script Project" --rootDir ./dist
-```
+- `src/index.js`: The main entry point for your application.
+- `src/html/`: Contains the HTML files for your user interface.
+- `src/server/`: Contains the server-side code for your application.
 
-**4.** Include the necessary [OAuth Scopes](./scopes.md) in the [appsscript.json](./appsscript.json) file
+### Writing Code
 
-**5.** Deploy the project
+You can write your code using modern JavaScript (ES6+) features. Vite will automatically transpile your code to a format that is compatible with the Google Apps Script V8 runtime.
 
-```
-npm run deploy
-```
+## Testing
 
-The `dist` directory contains the bundled code that is pushed to Google Apps Script.
+This starter kit uses [Jest](https://jestjs.io/) for unit testing.
 
-![Google Apps Script - Setup Development Environment](images/npm-install.gif)
+### Running Tests
 
-### The .claspignore file
+To run the tests, use the following command:
 
-The `.claspignore` file allows you to specify file and directories that you do not wish to upload to your Google Apps Script project via `clasp push`.
-
-The default `.claspignore` file in the Apps Script Starter kit will push all the JS and HTML inside the `rootDir` folder and ignore all the other files.
-
-## :beginner: Using Git with Google Apps Script
-
-![Google Apps Script - Github](images/github-apps-script.png)
-
-Create a new repository in Github and make a note of the URL of the new repository. Next, open the terminal and run the above commands to push your Apps Script project to Github.
-
-## Custom Google Sheet functions
-
-Please read [the tutorial](./FUNCTIONS.md) on how to write custom functions for Google Sheets using Apps Script.
-
-## Testing your Google Apps Script code
-
-You can run tests with jest using
-
-```
+```bash
 npm run test
 ```
 
-This has limitations:
+### Writing Tests
 
-- You _can_ test code that has no dependencies to Google App Script code, e.g.
+You can write tests for your code in files with a `.test.js` extension. The tests are located alongside the files they are testing.
 
-```
-const hasCpuTime = () => !(Date.now() - START_TIME > ONE_MINUTE * 4);
+**Note:** You cannot directly test code that has dependencies on Google Apps Script services (e.g., `SpreadsheetApp`, `Logger`). You will need to mock these services in your tests.
 
-```
+## Deployment
 
-- You _can not_ test code that has dependencies to Google App Script code, e.g.
+To deploy your project to Google Apps Script, run the following command:
 
-```
-function notTestable() {
-    Logger.log("notTestable"); // <-- Google Apps Script function. Not callable in dev
-    SpreadsheetApp.getUi(); // <-- Google Apps Script function. Not callable in dev
-    ...
-}
+```bash
+npm run deploy
 ```
 
-Check out [jest 'expects' here](https://jestjs.io/docs/expect)
+This command will build your project and then use `clasp` to push the bundled code to your Google Apps Script project.
 
-## :fire: Meet the Developer
+## Configuration
 
-<img align="left" width="100" height="100" src="https://pbs.twimg.com/profile_images/1320276905271070727/zQUrdqxO_200x200.jpg">
+The starter kit includes several configuration files to customize the development environment:
 
-[Amit Agarwal](https://www.labnol.org/about) is a web geek, Google Developers Expert (Google Workspace, Google Apps Script), Google Cloud Innovator, and author of [labnol.org](https://www.labnol.org/), a popular tech how-to website.
+- **`appsscript.json`:** The manifest file for your Google Apps Script project. You can use this file to specify dependencies, OAuth scopes, and other settings.
+- **`.clasp.json`:** The configuration file for `clasp`. This file specifies the `scriptId` and `rootDir` for your project.
+- **`vite.config.js`:** The configuration file for Vite. You can use this file to customize the build process.
+- **`.prettierrc`:** The configuration file for Prettier. You can use this file to customize the code formatting rules.
+- **`eslint.config.js`:** The configuration file for ESLint. You can use this file to customize the linting rules.
 
-He frequently uses [Google Apps Script](https://www.labnol.org/topic/google-apps-script/) to automate workflows and enhance productivity. Reach him on [Twitter](https://twitter.com/labnol) or email `amit@labnol.org`
+## Contributing
 
-### :cherry_blossom: Contribution
+Contributions, issues, and feature requests are welcome. If you are using this starter kit and have fixed a bug for yourself, please consider submitting a pull request!
 
-Contributions and feature requests are welcome. If you are using the Google Apps Script starter package and fixed a bug for yourself, please consider submitting a PR!
+## Development Conventions
 
-### :lock: License
+- **Coding Style:** The project uses Prettier for code formatting and ESLint for linting. The configuration for these tools can be found in `.prettierrc` and `eslint.config.js` respectively.
+- **Testing:** The project uses Jest for unit testing. Test files are located alongside the files they are testing and have a `.test.js` extension.
+- **Commits:** The project does not have a formal commit message convention, but it is recommended to follow standard practices for writing clear and descriptive commit messages.
 
-[MIT License](https://github.com/labnol/apps-script-starter/blob/master/LICENSE) (c) [Amit Agarwal](https://www.labnol.org/about/)
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Developed by [Amit Agarwal](https://www.labnol.org/about) | [Digital Inspiration](https://digitalinspiration.com/)
