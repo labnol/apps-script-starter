@@ -9,9 +9,9 @@ const viteExposeGasFunctions = () => ({
   name: 'vite-expose-gas-functions',
   generateBundle(options, bundle) {
     const entryChunk = Object.values(bundle).find((chunk) => chunk.type === 'chunk' && chunk.isEntry);
-    if (entryChunk) {
+    if (entryChunk?.exports?.length > 0) {
       const exposureCode = entryChunk.exports
-        .map((fnName) => `function ${fnName}() { return ${options.name}.${fnName}.apply(this, arguments); }`)
+        .map((fnName) => `function ${fnName}(...args) { return ${options.name}.${fnName}(...args); }`)
         .join('\n');
       entryChunk.code += `\n\n${exposureCode}`;
     }
