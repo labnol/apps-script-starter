@@ -2,6 +2,7 @@ import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+
 import viteExposeGasFunctions from './vite-plugins/gas-expose.js';
 
 const __filename = fileURLToPath(import.meta.url);
