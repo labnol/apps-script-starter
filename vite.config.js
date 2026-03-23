@@ -12,11 +12,11 @@ const targets = [
   {
     src: 'node_modules/apps-script-oauth2/dist/OAuth2.gs',
     dest: '.',
-    rename: (fileName) => `${fileName.toLowerCase()}.js`,
+    rename: { stripBase: true },
   },
-  { src: 'src/html/*.html', dest: '.' },
-  { src: 'functions/**/*.js', dest: '.' },
-  { src: 'appsscript.json', dest: '.' },
+  { src: 'src/html/*.html', dest: '.', rename: { stripBase: true } },
+  { src: 'functions/**/*.js', dest: '.', rename: { stripBase: true } },
+  { src: 'appsscript.json', dest: '.', rename: { stripBase: true } },
 ];
 
 export default defineConfig(({ mode }) => ({

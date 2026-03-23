@@ -18,8 +18,8 @@
     "jest": "^30.3.0",
     "prettier": "^3.8.1",
     "query-string": "^9.3.1",
-    "vite": "^8.0.0",
-    "vite-plugin-static-copy": "^3.3.0"
+    "vite": "^8.0.1",
+    "vite-plugin-static-copy": "^4.0.0"
   },
   "homepage": "https://digitalinspiration.com/",
   "keywords": [
