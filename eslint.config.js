@@ -1,21 +1,18 @@
 import eslintPlugin from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import googleappsscript from 'eslint-plugin-googleappsscript';
-import importPlugin from 'eslint-plugin-import';
-import jsoncPlugin from 'eslint-plugin-jsonc';
-import prettierPlugin from 'eslint-plugin-prettier';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import { importX } from 'eslint-plugin-import-x';
+import { configs as jsoncConfigs } from 'eslint-plugin-jsonc';
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 
 export default [
   eslintPlugin.configs.recommended,
-  eslintPluginPrettierRecommended,
+  importX.flatConfigs.recommended,
   { ignores: ['dist/**', 'build/**', 'node_modules/**', 'package-lock.json'] },
   {
     files: ['**/*.js'],
     plugins: {
-      prettier: prettierPlugin,
-      import: importPlugin,
       'simple-import-sort': pluginSimpleImportSort,
       googleappsscript,
     },
@@ -31,7 +28,6 @@ export default [
       },
     },
     rules: {
-      ...importPlugin.configs.recommended.rules,
       'no-continue': 'off',
       'no-console': 'warn',
       'no-underscore-dangle': 'off',
@@ -47,6 +43,7 @@ export default [
       'no-var': 'error',
       'prefer-const': 'error',
       'prefer-template': 'error',
+      'no-use-before-define': 'error',
       'prefer-arrow-callback': 'error',
       'arrow-spacing': 'error',
       'no-duplicate-imports': 'error',
@@ -67,30 +64,18 @@ export default [
       camelcase: 'off',
 
       // Import/export rules
-      'import/prefer-default-export': 'off',
-      'import/no-extraneous-dependencies': 'warn',
-      'import/extensions': ['error', 'ignorePackages'],
-      'import/no-unresolved': 'off', // Disabled for Apps Script compatibility
-      'import/no-cycle': 'warn',
-      'import/no-self-import': 'error',
-      'import/no-useless-path-segments': 'error',
+      'import-x/no-extraneous-dependencies': 'warn',
+      'import-x/extensions': ['error', 'ignorePackages'],
+      'import-x/no-unresolved': 'off', // Disabled for Apps Script compatibility
+      'import-x/no-cycle': 'off',
+      'import-x/no-self-import': 'error',
+      'import-x/no-useless-path-segments': 'error',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-      'prettier/prettier': [
-        'error',
-        {
-          trailingComma: 'es5',
-          singleQuote: true,
-          printWidth: 120,
-          endOfLine: 'auto',
-          semi: true,
-          tabWidth: 2,
-        },
-      ],
     },
   },
 
-  ...jsoncPlugin.configs['flat/recommended-with-jsonc'],
+  ...jsoncConfigs['flat/recommended-with-jsonc'],
   {
     files: ['**/*.json', '**/*.jsonc'],
     rules: {
@@ -110,7 +95,7 @@ export default [
     },
     rules: {
       'no-console': 'off', // Allow console in tests
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: true,
@@ -129,7 +114,7 @@ export default [
       },
     },
     rules: {
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: true,
@@ -145,4 +130,7 @@ export default [
       },
     },
   },
+
+  // Must be last: turns off ESLint stylistic rules that conflict with Prettier (.prettierrc).
+  eslintConfigPrettier,
 ];
